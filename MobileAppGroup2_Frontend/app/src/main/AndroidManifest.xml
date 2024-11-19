@@ -36,6 +36,7 @@
             android:launchMode="singleTop" />
         <activity android:name=".ReviewDetailActivity" />
         <activity android:name=".menu_activities.AddMenuActivity" />
+        <activity android:name=".UserActivity" />
     </application>
 
 
