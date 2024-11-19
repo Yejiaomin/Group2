@@ -17,7 +17,7 @@ public class MenuItemController {
         this.menuItemService = menuItemService;
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public List<MenuItem> getAllMenuItems() {
         return menuItemService.getAllMenuItems();
     }
