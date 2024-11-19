@@ -1,18 +1,27 @@
 package com.example.owner;
 
+import com.example.owner.model.LoginResponse;
+import com.example.owner.model.LoginRequest;
+
+import java.util.List;
+import java.util.Map;
+
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 public interface UserApiService {
+
+    // 用户注册
     @POST("api/users/register")
     Call<UserResponse> registerUser(@Body User user);
 
-    @POST("api/users/login") // 确保路径与后端一致
-    Call<UserResponse> loginUser(@Body LoginRequest loginRequest);
+    @GET("api/account/exists")
+    Call<Map<String, Object>> checkAccountExists(@Query("email") String email);
 
-    @GET("api/users") // 确保路径与后端一致
-    Call<UserResponse> getUsers();
-
+    // 用户登录
+    @POST("api/users/login")
+    Call<LoginResponse> loginUser(@Body LoginRequest request);
 }

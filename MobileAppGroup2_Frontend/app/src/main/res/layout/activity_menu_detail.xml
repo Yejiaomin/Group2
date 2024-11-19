@@ -6,6 +6,12 @@
     android:background="#FFF5E9"
     android:padding="16dp">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp" />
+
     <!-- 可滚动的内容区域 -->
     <ScrollView
         android:layout_width="match_parent"

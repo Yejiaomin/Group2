@@ -1,68 +1,46 @@
 package com.example.owner;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.FrameLayout;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import com.google.android.material.tabs.TabLayout;
+import com.example.owner.combo_activities.ComboListActivity;
+import com.example.owner.menu_activities.MenuListActivity;
+import com.example.owner.menu_activities.ProfileActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class RestaurantActivity extends AppCompatActivity {
-
-    private TabLayout tabLayout;
-    private FrameLayout frameLayout;
+public class RestaurantActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_restaurant);
+        setContentView(R.layout.activity_restaurant); // 使用修改后的XML布局
 
-        tabLayout = findViewById(R.id.tabLayout);
-        frameLayout = findViewById(R.id.frameLayout);
+        // 获取 BottomNavigationView
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
-        // 添加Tab选项
-        tabLayout.addTab(tabLayout.newTab().setText("Combo"));
-        tabLayout.addTab(tabLayout.newTab().setText("Menu"));
-        tabLayout.addTab(tabLayout.newTab().setText("Review"));
-
-        // 默认显示 ComboFragment
-        loadFragment(new ComboFragment());
-
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                Fragment selectedFragment = null;
-                switch (tab.getPosition()) {
-                    case 0:
-                        selectedFragment = new ComboFragment();
-                        break;
-                    case 1:
-                        selectedFragment = new MenuFragment();
-                        break;
-                    case 2:
-                        selectedFragment = new ReviewFragment();
-                        break;
-                }
-                if (selectedFragment != null) {
-                    loadFragment(selectedFragment);
-                }
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {}
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {}
-        });
+        // 设置监听器
+        bottomNavigationView.setOnNavigationItemSelectedListener(this);
     }
 
-    private void loadFragment(Fragment fragment) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.frameLayout, fragment);
-        transaction.commit();
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int itemId = item.getItemId();
+
+        if (itemId == R.id.nav_combos) {
+            // 跳转到 ComboListActivity
+            startActivity(new Intent(this, ComboListActivity.class));
+        } else if (itemId == R.id.nav_menus) {
+            // 跳转到 MenuListActivity
+            startActivity(new Intent(this, MenuListActivity.class));
+        } else if (itemId == R.id.nav_profile) {
+            // 跳转到 ProfileActivity
+            startActivity(new Intent(this, ProfileActivity.class));
+        }
+
+        return true;
     }
 }

@@ -5,22 +5,16 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- RecyclerView 动态展示菜单项 -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="8dp" />
+        android:layout_weight="1" />
 
-    <!-- 固定在页面底部的按钮 -->
     <Button
         android:id="@+id/addMenuButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add Menu Item"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#D4A03D"
-        android:textColor="#FFFFFF" />
+        android:layout_marginTop="8dp" />
 </LinearLayout>

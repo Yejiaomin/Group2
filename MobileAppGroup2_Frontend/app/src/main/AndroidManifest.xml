@@ -27,9 +27,15 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".RestaurantActivity" />
-        <activity android:name=".ComboDetailActivity" />
-        <activity android:name=".MenuDetailActivity" />
+        <activity android:name=".combo_activities.ComboDetailActivity" />
+        <activity android:name=".menu_activities.MenuListActivity"
+            android:launchMode="singleTop" /> <!-- 确保使用单实例 -->
+        <activity android:name=".combo_activities.ComboListActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".menu_activities.ProfileActivity"
+            android:launchMode="singleTop" />
         <activity android:name=".ReviewDetailActivity" />
+        <activity android:name=".menu_activities.AddMenuActivity" />
     </application>
 
 

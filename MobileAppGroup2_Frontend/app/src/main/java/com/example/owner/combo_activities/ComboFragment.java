@@ -1,4 +1,4 @@
-package com.example.owner;
+package com.example.owner.combo_activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,18 +11,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import java.util.Arrays;
-import java.util.List;
+import com.example.owner.R;
 
-public class MenuFragment extends Fragment {
+public class ComboFragment  extends Fragment {
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_menu, container, false);
+        View view = inflater.inflate(R.layout.fragment_combo, container, false);
 
-        TextView others = view.findViewById(R.id.othersMenu);
+        TextView others = view.findViewById(R.id.othersCombo);
         others.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), MenuDetailActivity.class);
+            Intent intent = new Intent(getActivity(), ComboDetailActivity.class);
             startActivity(intent);
         });
 
