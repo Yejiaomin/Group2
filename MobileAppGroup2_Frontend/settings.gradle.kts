@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Owner"
+rootProject.name = "FoodMateFrontend"
 include(":app")
  

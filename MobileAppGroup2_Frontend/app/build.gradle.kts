@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.owner"
+    namespace = "com.example.foodMateFrontend"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.owner"
+        applicationId = "com.example.foodMateFrontend"
         minSdk = 28
         targetSdk = 34
         versionCode = 1

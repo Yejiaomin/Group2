@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FoodMates</string>
+    <string name="app_name">FoodMateFrontend</string>
     <string name="login_button">Login</string>
     <string name="register_button">Register</string>
     <string name="login_title">Login</string>
