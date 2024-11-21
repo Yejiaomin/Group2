@@ -1,0 +1,218 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.foodMateFrontend"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="28"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:5:5-67
+11-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:5:22-64
+12
+13    <queries>
+13-->[com.android.car.ui:car-ui-lib:2.6.0] C:\Users\Ziting\.gradle\caches\transforms-4\095b0839bef28d5b2a06db335cc653ca\transformed\car-ui-lib-2.6.0\AndroidManifest.xml:23:5-34:15
+14
+15        <!-- Required for querying the IME service at runtime -->
+16        <intent>
+16-->[com.android.car.ui:car-ui-lib:2.6.0] C:\Users\Ziting\.gradle\caches\transforms-4\095b0839bef28d5b2a06db335cc653ca\transformed\car-ui-lib-2.6.0\AndroidManifest.xml:26:9-28:18
+17            <action android:name="android.view.InputMethod" />
+17-->[com.android.car.ui:car-ui-lib:2.6.0] C:\Users\Ziting\.gradle\caches\transforms-4\095b0839bef28d5b2a06db335cc653ca\transformed\car-ui-lib-2.6.0\AndroidManifest.xml:27:13-63
+17-->[com.android.car.ui:car-ui-lib:2.6.0] C:\Users\Ziting\.gradle\caches\transforms-4\095b0839bef28d5b2a06db335cc653ca\transformed\car-ui-lib-2.6.0\AndroidManifest.xml:27:21-60
+18        </intent>
+19        <!-- Required for querying the plugin at runtime -->
+20        <provider
+20-->[com.android.car.ui:car-ui-lib:2.6.0] C:\Users\Ziting\.gradle\caches\transforms-4\095b0839bef28d5b2a06db335cc653ca\transformed\car-ui-lib-2.6.0\AndroidManifest.xml:30:9-33:67
+21            android:name="com.android.car.ui.plugin.PluginNameProvider"
+21-->[com.android.car.ui:car-ui-lib:2.6.0] C:\Users\Ziting\.gradle\caches\transforms-4\095b0839bef28d5b2a06db335cc653ca\transformed\car-ui-lib-2.6.0\AndroidManifest.xml:31:13-72
+22            android:authorities="com.android.car.ui.plugin" />
+22-->[com.android.car.ui:car-ui-lib:2.6.0] C:\Users\Ziting\.gradle\caches\transforms-4\095b0839bef28d5b2a06db335cc653ca\transformed\car-ui-lib-2.6.0\AndroidManifest.xml:32:13-60
+23    </queries>
+24
+25    <permission
+25-->[androidx.core:core:1.13.0] C:\Users\Ziting\.gradle\caches\transforms-4\d01d5cb01ad93e57cdbf92981c8f74ac\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+26        android:name="com.example.foodMateFrontend.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+26-->[androidx.core:core:1.13.0] C:\Users\Ziting\.gradle\caches\transforms-4\d01d5cb01ad93e57cdbf92981c8f74ac\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+27        android:protectionLevel="signature" />
+27-->[androidx.core:core:1.13.0] C:\Users\Ziting\.gradle\caches\transforms-4\d01d5cb01ad93e57cdbf92981c8f74ac\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+28
+29    <uses-permission android:name="com.example.foodMateFrontend.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+29-->[androidx.core:core:1.13.0] C:\Users\Ziting\.gradle\caches\transforms-4\d01d5cb01ad93e57cdbf92981c8f74ac\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+29-->[androidx.core:core:1.13.0] C:\Users\Ziting\.gradle\caches\transforms-4\d01d5cb01ad93e57cdbf92981c8f74ac\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+30
+31    <application
+31-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:7:5-40:19
+32        android:allowBackup="true"
+32-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:9:9-35
+33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+33-->[androidx.core:core:1.13.0] C:\Users\Ziting\.gradle\caches\transforms-4\d01d5cb01ad93e57cdbf92981c8f74ac\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+34        android:dataExtractionRules="@xml/data_extraction_rules"
+34-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:10:9-65
+35        android:debuggable="true"
+36        android:extractNativeLibs="false"
+37        android:fullBackupContent="@xml/backup_rules"
+37-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:11:9-54
+38        android:icon="@mipmap/ic_launcher"
+38-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:12:9-43
+39        android:label="@string/app_name"
+39-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:13:9-41
+40        android:roundIcon="@mipmap/ic_launcher_round"
+40-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:14:9-54
+41        android:supportsRtl="true"
+41-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:15:9-35
+42        android:testOnly="true"
+43        android:theme="@style/Theme.foodMateFrontend"
+43-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:16:9-54
+44        android:usesCleartextTraffic="true" >
+44-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:8:9-44
+45        <activity
+45-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:18:9-26:20
+46            android:name="com.example.foodMateFrontend.MainActivity"
+46-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:19:13-41
+47            android:exported="true" >
+47-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:20:13-36
+48            <intent-filter>
+48-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:21:13-25:29
+49                <action android:name="android.intent.action.MAIN" />
+49-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:22:17-69
+49-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:22:25-66
+50
+51                <category android:name="android.intent.category.LAUNCHER" />
+51-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:24:17-77
+51-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:24:27-74
+52            </intent-filter>
+53        </activity>
+54        <activity android:name="com.example.foodMateFrontend.LoginActivity" />
+54-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:27:9-51
+54-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:27:19-48
+55        <activity android:name="com.example.foodMateFrontend.RegisterActivity" />
+55-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:28:9-54
+55-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:28:19-51
+56        <activity android:name="com.example.foodMateFrontend.RestaurantActivity" />
+56-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:29:9-56
+56-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:29:19-53
+57        <activity android:name="com.example.foodMateFrontend.combo_activities.ComboDetailActivity" />
+57-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:30:9-74
+57-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:30:19-71
+58        <activity
+58-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:31:9-32:46
+59            android:name="com.example.foodMateFrontend.menu_activities.MenuListActivity"
+59-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:31:19-67
+60            android:launchMode="singleTop" /> <!-- 确保使用单实例 -->
+60-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:32:13-43
+61        <activity
+61-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:33:9-34:46
+62            android:name="com.example.foodMateFrontend.combo_activities.ComboListActivity"
+62-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:33:19-69
+63            android:launchMode="singleTop" />
+63-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:34:13-43
+64        <activity
+64-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:35:9-36:46
+65            android:name="com.example.foodMateFrontend.menu_activities.ProfileActivity"
+65-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:35:19-66
+66            android:launchMode="singleTop" />
+66-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:36:13-43
+67        <activity android:name="com.example.foodMateFrontend.ReviewDetailActivity" />
+67-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:37:9-58
+67-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:37:19-55
+68        <activity android:name="com.example.foodMateFrontend.menu_activities.AddMenuActivity" />
+68-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:38:9-69
+68-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:38:19-66
+69        <activity android:name="com.example.foodMateFrontend.UserActivity" />
+69-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:39:9-50
+69-->D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\src\main\AndroidManifest.xml:39:19-47
+70
+71        <provider
+71-->[com.android.car.ui:car-ui-lib:2.6.0] C:\Users\Ziting\.gradle\caches\transforms-4\095b0839bef28d5b2a06db335cc653ca\transformed\car-ui-lib-2.6.0\AndroidManifest.xml:37:9-42:71
+72            android:name="com.android.car.ui.core.CarUiInstaller"
+72-->[com.android.car.ui:car-ui-lib:2.6.0] C:\Users\Ziting\.gradle\caches\transforms-4\095b0839bef28d5b2a06db335cc653ca\transformed\car-ui-lib-2.6.0\AndroidManifest.xml:38:13-66
+73            android:authorities="com.example.foodMateFrontend.CarUiInstaller"
+73-->[com.android.car.ui:car-ui-lib:2.6.0] C:\Users\Ziting\.gradle\caches\transforms-4\095b0839bef28d5b2a06db335cc653ca\transformed\car-ui-lib-2.6.0\AndroidManifest.xml:39:13-66
+74            android:directBootAware="true"
+74-->[com.android.car.ui:car-ui-lib:2.6.0] C:\Users\Ziting\.gradle\caches\transforms-4\095b0839bef28d5b2a06db335cc653ca\transformed\car-ui-lib-2.6.0\AndroidManifest.xml:40:13-43
+75            android:exported="false"
+75-->[com.android.car.ui:car-ui-lib:2.6.0] C:\Users\Ziting\.gradle\caches\transforms-4\095b0839bef28d5b2a06db335cc653ca\transformed\car-ui-lib-2.6.0\AndroidManifest.xml:41:13-37
+76            android:process="@string/car_ui_installer_process_name" />
+76-->[com.android.car.ui:car-ui-lib:2.6.0] C:\Users\Ziting\.gradle\caches\transforms-4\095b0839bef28d5b2a06db335cc653ca\transformed\car-ui-lib-2.6.0\AndroidManifest.xml:42:13-68
+77        <provider
+77-->[com.android.car.ui:car-ui-lib:2.6.0] C:\Users\Ziting\.gradle\caches\transforms-4\095b0839bef28d5b2a06db335cc653ca\transformed\car-ui-lib-2.6.0\AndroidManifest.xml:43:9-48:79
+78            android:name="com.android.car.ui.core.SearchResultsProvider"
+78-->[com.android.car.ui:car-ui-lib:2.6.0] C:\Users\Ziting\.gradle\caches\transforms-4\095b0839bef28d5b2a06db335cc653ca\transformed\car-ui-lib-2.6.0\AndroidManifest.xml:44:13-73
+79            android:authorities="com.example.foodMateFrontend.SearchResultsProvider"
+79-->[com.android.car.ui:car-ui-lib:2.6.0] C:\Users\Ziting\.gradle\caches\transforms-4\095b0839bef28d5b2a06db335cc653ca\transformed\car-ui-lib-2.6.0\AndroidManifest.xml:45:13-73
+80            android:exported="true"
+80-->[com.android.car.ui:car-ui-lib:2.6.0] C:\Users\Ziting\.gradle\caches\transforms-4\095b0839bef28d5b2a06db335cc653ca\transformed\car-ui-lib-2.6.0\AndroidManifest.xml:46:13-36
+81            android:process="@string/car_ui_installer_process_name"
+81-->[com.android.car.ui:car-ui-lib:2.6.0] C:\Users\Ziting\.gradle\caches\transforms-4\095b0839bef28d5b2a06db335cc653ca\transformed\car-ui-lib-2.6.0\AndroidManifest.xml:47:13-68
+82            android:readPermission="com.android.car.ui.READ_SEARCH_RESULTS" />
+82-->[com.android.car.ui:car-ui-lib:2.6.0] C:\Users\Ziting\.gradle\caches\transforms-4\095b0839bef28d5b2a06db335cc653ca\transformed\car-ui-lib-2.6.0\AndroidManifest.xml:48:13-76
+83        <provider
+83-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Ziting\.gradle\caches\transforms-4\226ccf95d213da4a70618933ea68b850\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+84            android:name="androidx.startup.InitializationProvider"
+84-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Ziting\.gradle\caches\transforms-4\226ccf95d213da4a70618933ea68b850\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+85            android:authorities="com.example.foodMateFrontend.androidx-startup"
+85-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Ziting\.gradle\caches\transforms-4\226ccf95d213da4a70618933ea68b850\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+86            android:exported="false" >
+86-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Ziting\.gradle\caches\transforms-4\226ccf95d213da4a70618933ea68b850\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+87            <meta-data
+87-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Ziting\.gradle\caches\transforms-4\226ccf95d213da4a70618933ea68b850\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+88                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+88-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Ziting\.gradle\caches\transforms-4\226ccf95d213da4a70618933ea68b850\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+89                android:value="androidx.startup" />
+89-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Ziting\.gradle\caches\transforms-4\226ccf95d213da4a70618933ea68b850\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+90            <meta-data
+90-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Ziting\.gradle\caches\transforms-4\637d29d06222ca951fcaf2d9b9158a0e\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+91                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+91-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Ziting\.gradle\caches\transforms-4\637d29d06222ca951fcaf2d9b9158a0e\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+92                android:value="androidx.startup" />
+92-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Ziting\.gradle\caches\transforms-4\637d29d06222ca951fcaf2d9b9158a0e\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+93            <meta-data
+93-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+94                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+94-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+95                android:value="androidx.startup" />
+95-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+96        </provider>
+97
+98        <receiver
+98-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+99            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+99-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+100            android:directBootAware="false"
+100-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+101            android:enabled="true"
+101-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+102            android:exported="true"
+102-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+103            android:permission="android.permission.DUMP" >
+103-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+104            <intent-filter>
+104-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+105                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+105-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+105-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+106            </intent-filter>
+107            <intent-filter>
+107-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+108                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+108-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+108-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+109            </intent-filter>
+110            <intent-filter>
+110-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+111                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+111-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+111-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+112            </intent-filter>
+113            <intent-filter>
+113-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+114                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+114-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+114-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Ziting\.gradle\caches\transforms-4\104d7cc23e0058f62fbead16a0850ef4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+115            </intent-filter>
+116        </receiver>
+117    </application>
+118
+119</manifest>

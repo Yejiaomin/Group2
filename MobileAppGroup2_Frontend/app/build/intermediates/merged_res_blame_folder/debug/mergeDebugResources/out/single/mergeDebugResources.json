@@ -1,0 +1,174 @@
+[
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/layout_activity_profile.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/layout/activity_profile.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/layout_activity_main.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/drawable_restaurant_img.png.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/drawable/restaurant_img.png"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/drawable_rounded_edittext.png.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/drawable/rounded_edittext.png"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/xml_backup_rules.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/drawable_ic_placeholder.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/drawable/ic_placeholder.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/drawable_food_image.png.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/drawable/food_image.png"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/layout_activity_review_detail.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/layout/activity_review_detail.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/layout_activity_add_menu.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/layout/activity_add_menu.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/layout_activity_menu_detail.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/layout/activity_menu_detail.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/layout_fragment_review.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/layout/fragment_review.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/layout_activity_register.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/layout/activity_register.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/drawable_custom_checkbox.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/drawable/custom_checkbox.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/layout_activity_combo_list.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/layout/activity_combo_list.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/layout_activity_combo_detail.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/layout/activity_combo_detail.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/layout_fragment_combo.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/layout/fragment_combo.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/layout_activity_menu_list.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/layout/activity_menu_list.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/drawable_apple_icon.png.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/drawable/apple_icon.png"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/layout_activity_user.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/layout/activity_user.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/drawable_checkbox_unchecked.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/drawable/checkbox_unchecked.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/layout_fragment_menu.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/layout/fragment_menu.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/layout_activity_restaurant.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/layout/activity_restaurant.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/drawable_checkbox_checked.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/drawable/checkbox_checked.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/menu_menu_add.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/menu/menu_add.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/layout_activity_login.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/layout_menu_item.xml.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/layout/menu_item.xml"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/drawable_google_icon.png.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/drawable/google_icon.png"
+    },
+    {
+        "merged": "com.example.foodMateFrontend.app-debug-33:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.foodMateFrontend.app-main-35:/mipmap-xhdpi/ic_launcher.webp"
+    }
+]
