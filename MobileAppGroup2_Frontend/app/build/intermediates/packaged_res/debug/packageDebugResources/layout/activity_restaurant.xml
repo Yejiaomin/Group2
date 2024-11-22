@@ -120,5 +120,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@drawable/buttomnavicolor"
+        app:itemTextColor="@drawable/buttomnavicolor"
         android:background="#FFF5E9" />
 </LinearLayout>

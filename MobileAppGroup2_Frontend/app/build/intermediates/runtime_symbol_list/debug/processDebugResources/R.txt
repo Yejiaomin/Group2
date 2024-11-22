@@ -1532,6 +1532,7 @@ int color accent_material_dark 0x7f060019
 int color accent_material_light 0x7f06001a
 int color androidx_core_ripple_material_light 0x7f06001b
 int color androidx_core_secondary_text_default_material_light 0x7f06001c
+int color backgroundColor 0x7f06032d
 int color background_floating_material_dark 0x7f06001d
 int color background_floating_material_light 0x7f06001e
 int color background_material_dark 0x7f06001f
@@ -1634,6 +1635,7 @@ int color error_color_material_dark 0x7f06007f
 int color error_color_material_light 0x7f060080
 int color foreground_material_dark 0x7f060081
 int color foreground_material_light 0x7f060082
+int color gray 0x7f06032e
 int color highlighted_text_material_dark 0x7f060083
 int color highlighted_text_material_light 0x7f060084
 int color m3_appbar_overlay_color 0x7f060085
@@ -3374,6 +3376,7 @@ int drawable btn_radio_off_mtrl 0x7f08007f
 int drawable btn_radio_off_to_on_mtrl_animation 0x7f080080
 int drawable btn_radio_on_mtrl 0x7f080081
 int drawable btn_radio_on_to_off_mtrl_animation 0x7f080082
+int drawable buttomnavicolor 0x7f080129
 int drawable car_ui_activity_background 0x7f080083
 int drawable car_ui_app_styled_view_background 0x7f080084
 int drawable car_ui_app_styled_view_ripple 0x7f080085
@@ -3536,6 +3539,7 @@ int drawable notify_panel_notification_icon_bg 0x7f080121
 int drawable preference_list_divider_material 0x7f080122
 int drawable restaurant_img 0x7f080123
 int drawable rounded_edittext 0x7f080124
+int drawable roundedbutton 0x7f080128
 int drawable test_level_drawable 0x7f080125
 int drawable tooltip_frame_dark 0x7f080126
 int drawable tooltip_frame_light 0x7f080127
@@ -3551,6 +3555,7 @@ int id SHOW_ALL 0x7f090008
 int id SHOW_PATH 0x7f090009
 int id SHOW_PROGRESS 0x7f09000a
 int id SYM 0x7f09000b
+int id SelectComboSize 0x7f0902b6
 int id TOP_END 0x7f09000c
 int id TOP_START 0x7f09000d
 int id UX_RESTRICTIONS_FULLY_RESTRICTED 0x7f09000e
@@ -3659,6 +3664,8 @@ int id bounce 0x7f090074
 int id bounceBoth 0x7f090075
 int id bounceEnd 0x7f090076
 int id bounceStart 0x7f090077
+int id button 0x7f0902b7
+int id button2 0x7f0902b8
 int id buttonPanel 0x7f090078
 int id cache_measures 0x7f090079
 int id callMeasure 0x7f09007a
@@ -3780,6 +3787,8 @@ int id collapseActionView 0x7f0900ed
 int id combo1 0x7f0900ee
 int id combo2 0x7f0900ef
 int id combo3 0x7f0900f0
+int id comboPriceSelection 0x7f0902b9
+int id comboSizeSelection 0x7f0902ba
 int id compress 0x7f0900f1
 int id confirm_button 0x7f0900f2
 int id constraint 0x7f0900f3
@@ -3832,6 +3841,8 @@ int id easeInOut 0x7f090121
 int id easeOut 0x7f090122
 int id east 0x7f090123
 int id edge 0x7f090124
+int id editTextNumber 0x7f0902bb
+int id editTextNumber3 0x7f0902bc
 int id edit_query 0x7f090125
 int id edit_text_id 0x7f090126
 int id edittext 0x7f090127
@@ -3894,6 +3905,8 @@ int id ignoreRequest 0x7f09015f
 int id image 0x7f090160
 int id imagePreview 0x7f090161
 int id immediateStop 0x7f090162
+int id importData 0x7f0902bd
+int id importOrderData 0x7f0902be
 int id included 0x7f090163
 int id indeterminate 0x7f090164
 int id info 0x7f090165
@@ -3912,6 +3925,7 @@ int id legacy 0x7f090171
 int id line1 0x7f090172
 int id line3 0x7f090173
 int id linear 0x7f090174
+int id linearLayout2 0x7f0902bf
 int id list 0x7f090175
 int id listMode 0x7f090176
 int id list_item 0x7f090177
@@ -3920,6 +3934,7 @@ int id loginOptionsText 0x7f090179
 int id loginSubmitButton 0x7f09017a
 int id loginTitle 0x7f09017b
 int id m3_side_sheet 0x7f09017c
+int id main 0x7f0902b5
 int id marquee 0x7f09017d
 int id masked 0x7f09017e
 int id match_constraint 0x7f09017f
@@ -4059,7 +4074,6 @@ int id radio_button 0x7f090204
 int id ratio 0x7f090205
 int id rectangles 0x7f090206
 int id recyclerView 0x7f090207
-int id recyclerViewCombos 0x7f090208
 int id recycler_view 0x7f090209
 int id registerButton 0x7f09020a
 int id registerSubmitButton 0x7f09020b
@@ -4105,6 +4119,7 @@ int id seekbar 0x7f090232
 int id seekbar_value 0x7f090233
 int id seekbardialog 0x7f090234
 int id selectImageButton 0x7f090235
+int id selectMenu 0x7f0902c0
 int id select_dialog_listview 0x7f090236
 int id selected 0x7f090237
 int id selection_type 0x7f090238
@@ -4172,6 +4187,9 @@ int id textSpacerNoButtons 0x7f090275
 int id textSpacerNoTitle 0x7f090276
 int id textStart 0x7f090277
 int id textTop 0x7f090278
+int id textView2 0x7f0902c1
+int id textView5 0x7f0902c2
+int id textView6 0x7f0902c3
 int id text_input_end_icon 0x7f090279
 int id text_input_error_icon 0x7f09027a
 int id text_input_start_icon 0x7f09027b

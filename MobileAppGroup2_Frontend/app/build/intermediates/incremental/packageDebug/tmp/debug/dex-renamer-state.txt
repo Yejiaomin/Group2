@@ -1,11 +1,11 @@
-#Thu Nov 21 10:57:02 PST 2024
-base.0=D\:\\yxs\\Github\\Group2\\MobileAppGroup2_Frontend\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=D\:\\yxs\\Github\\Group2\\MobileAppGroup2_Frontend\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=D\:\\yxs\\Github\\Group2\\MobileAppGroup2_Frontend\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
-base.3=D\:\\yxs\\Github\\Group2\\MobileAppGroup2_Frontend\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
-base.4=D\:\\yxs\\Github\\Group2\\MobileAppGroup2_Frontend\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
-base.5=D\:\\yxs\\Github\\Group2\\MobileAppGroup2_Frontend\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
-base.6=D\:\\yxs\\Github\\Group2\\MobileAppGroup2_Frontend\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+#Thu Nov 21 20:44:55 PST 2024
+base.0=E\:\\yxs\\CS5520Project\\FinalProject\\Group2\\MobileAppGroup2_Frontend\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=E\:\\yxs\\CS5520Project\\FinalProject\\Group2\\MobileAppGroup2_Frontend\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=E\:\\yxs\\CS5520Project\\FinalProject\\Group2\\MobileAppGroup2_Frontend\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
+base.3=E\:\\yxs\\CS5520Project\\FinalProject\\Group2\\MobileAppGroup2_Frontend\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
+base.4=E\:\\yxs\\CS5520Project\\FinalProject\\Group2\\MobileAppGroup2_Frontend\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
+base.5=E\:\\yxs\\CS5520Project\\FinalProject\\Group2\\MobileAppGroup2_Frontend\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+base.6=E\:\\yxs\\CS5520Project\\FinalProject\\Group2\\MobileAppGroup2_Frontend\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=12/classes.dex

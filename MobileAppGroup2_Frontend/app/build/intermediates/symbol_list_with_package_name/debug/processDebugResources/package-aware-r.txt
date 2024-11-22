@@ -1533,6 +1533,7 @@ color accent_material_dark
 color accent_material_light
 color androidx_core_ripple_material_light
 color androidx_core_secondary_text_default_material_light
+color backgroundColor
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
@@ -1635,6 +1636,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color gray
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color m3_appbar_overlay_color
@@ -3375,6 +3377,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable buttomnavicolor
 drawable car_ui_activity_background
 drawable car_ui_app_styled_view_background
 drawable car_ui_app_styled_view_ripple
@@ -3537,6 +3540,7 @@ drawable notify_panel_notification_icon_bg
 drawable preference_list_divider_material
 drawable restaurant_img
 drawable rounded_edittext
+drawable roundedbutton
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3552,6 +3556,7 @@ id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
+id SelectComboSize
 id TOP_END
 id TOP_START
 id UX_RESTRICTIONS_FULLY_RESTRICTED
@@ -3660,6 +3665,8 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id button
+id button2
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3781,6 +3788,8 @@ id collapseActionView
 id combo1
 id combo2
 id combo3
+id comboPriceSelection
+id comboSizeSelection
 id compress
 id confirm_button
 id constraint
@@ -3833,6 +3842,8 @@ id easeInOut
 id easeOut
 id east
 id edge
+id editTextNumber
+id editTextNumber3
 id edit_query
 id edit_text_id
 id edittext
@@ -3895,6 +3906,8 @@ id ignoreRequest
 id image
 id imagePreview
 id immediateStop
+id importData
+id importOrderData
 id included
 id indeterminate
 id info
@@ -3913,6 +3926,7 @@ id legacy
 id line1
 id line3
 id linear
+id linearLayout2
 id list
 id listMode
 id list_item
@@ -3921,6 +3935,7 @@ id loginOptionsText
 id loginSubmitButton
 id loginTitle
 id m3_side_sheet
+id main
 id marquee
 id masked
 id match_constraint
@@ -4060,7 +4075,6 @@ id radio_button
 id ratio
 id rectangles
 id recyclerView
-id recyclerViewCombos
 id recycler_view
 id registerButton
 id registerSubmitButton
@@ -4106,6 +4120,7 @@ id seekbar
 id seekbar_value
 id seekbardialog
 id selectImageButton
+id selectMenu
 id select_dialog_listview
 id selected
 id selection_type
@@ -4173,6 +4188,9 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView2
+id textView5
+id textView6
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
