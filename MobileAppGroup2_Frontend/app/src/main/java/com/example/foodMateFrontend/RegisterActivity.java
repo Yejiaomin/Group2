@@ -13,6 +13,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.foodMateFrontend.menu_activities.MenuListActivity;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -102,7 +104,7 @@ public class RegisterActivity extends AppCompatActivity {
                 Log.v("Response-------", response.toString());
                 if (response.isSuccessful()) {
                     Toast.makeText(RegisterActivity.this, "User registered successfully", Toast.LENGTH_SHORT).show();
-                    navigateToActivity(UserActivity.class);
+                    navigateToActivity(MenuListActivity.class);
                 } else {
                     Toast.makeText(RegisterActivity.this, "User registration failed", Toast.LENGTH_SHORT).show();
                 }

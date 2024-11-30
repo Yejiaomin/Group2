@@ -49,6 +49,7 @@ id combo2
 id combo3
 id comboPriceSelection
 id comboSizeSelection
+id delete_button
 id desserts_arrow
 id desserts_card
 id desserts_content
@@ -113,6 +114,7 @@ id textView5
 id textView6
 id title
 id toggleUserTypeButton
+id update_button
 layout activity_add_menu
 layout activity_combo_detail
 layout activity_combo_list
@@ -126,6 +128,7 @@ layout activity_restaurant
 layout activity_review_detail
 layout activity_user
 layout dialog_add_menu_item
+layout dialog_menu_item_details
 layout fragment_combo
 layout fragment_menu
 layout fragment_review

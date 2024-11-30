@@ -88,7 +88,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 if (response.isSuccessful() && response.body() != null && response.body().isAuthenticated()) {
-                    navigateToUserActivity();
+                    navigateToMenuListActivity();
                 } else {
                     Toast.makeText(LoginActivity.this, "Incorrect email or password", Toast.LENGTH_SHORT).show();
                 }
@@ -127,7 +127,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void navigateToUserActivity() {
-        Intent intent = new Intent(LoginActivity.this, UserActivity.class);
+        Intent intent = new Intent(LoginActivity.this, MenuListActivity.class);
         startActivity(intent);
         finish();
     }

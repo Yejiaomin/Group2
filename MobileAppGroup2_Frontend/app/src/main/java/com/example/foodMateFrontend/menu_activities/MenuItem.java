@@ -4,22 +4,21 @@ public class MenuItem {
     private Integer id; // 可选字段，null 表示未设置
     private String name;
     private double price;
-    private String imageUrl; // 新增字段，用于存储图片 URL，可选
     private String category; // Added category field
 
     // 构造函数：用于从后端获取数据时
-    public MenuItem(Integer id, String name, double price, String imageUrl) {
+    public MenuItem(Integer id, String name, double price, String category) {
         this.id = id;
         this.name = name;
         this.price = price;
-        this.imageUrl = imageUrl;
+        this.category = category;
     }
 
     // 构造函数：用于创建新菜单项时（不需要 id 和可选 imageUrl）
-    public MenuItem(String name, double price, String imageUrl) {
+    public MenuItem(String name, double price, String category) {
         this.name = name;
         this.price = price;
-        this.imageUrl = imageUrl;
+        this.category = category;
     }
 
     public MenuItem() {
@@ -38,10 +37,6 @@ public class MenuItem {
         return price;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
     public String getCategory() {
         return category;
     }
@@ -56,10 +51,6 @@ public class MenuItem {
 
     public void setPrice(double price) {
         this.price = price;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
     }
 
     public void setCategory(String category) {

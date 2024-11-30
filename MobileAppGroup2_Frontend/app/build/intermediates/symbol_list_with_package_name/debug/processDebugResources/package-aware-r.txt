@@ -3829,6 +3829,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id delete_button
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -4265,6 +4266,7 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id update_button
 id useLogo
 id vertical
 id vertical_only
@@ -4501,6 +4503,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_add_menu_item
+layout dialog_menu_item_details
 layout expand_button
 layout fragment_combo
 layout fragment_menu

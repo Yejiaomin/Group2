@@ -9,9 +9,9 @@ public class MenuItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     private String name;  // 菜名
     private Double price; // 价格
-    private String imageUrl; // 图片 URL
+    private String category; 
 }
