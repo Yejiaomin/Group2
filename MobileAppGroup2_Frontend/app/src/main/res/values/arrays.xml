@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="menu_types">
+        <item>Appetizers Menu</item>
+        <item>Entrees Menu</item>
+        <item>Dessert Menu</item>
+        <item>Drink Menu</item>
+    </string-array>
+    
+    <string-array name="menu_categories">
+        <item>Select Type</item>
+        <item>Appetizers</item>
+        <item>Entrees</item>
+        <item>Desserts</item>
+        <item>Drinks</item>
+    </string-array>
+</resources> 

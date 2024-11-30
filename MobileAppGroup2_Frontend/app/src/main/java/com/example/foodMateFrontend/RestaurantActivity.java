@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.foodMateFrontend.combo_activities.ComboListActivity;
 import com.example.foodMateFrontend.menu_activities.MenuListActivity;
-import com.example.foodMateFrontend.menu_activities.ProfileActivity;
+import com.example.foodMateFrontend.profile_activities.ProfileActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class RestaurantActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {

@@ -40,7 +40,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.foodMateFrontend"
+        android:theme="@style/Theme.FoodMateFrontend"
         android:usesCleartextTraffic="true" >
         <activity
             android:name="com.example.foodMateFrontend.MainActivity"
@@ -62,10 +62,9 @@
             android:name="com.example.foodMateFrontend.combo_activities.ComboListActivity"
             android:launchMode="singleTop" />
         <activity
-            android:name="com.example.foodMateFrontend.menu_activities.ProfileActivity"
+            android:name="com.example.foodMateFrontend.profile_activities.ProfileActivity"
             android:launchMode="singleTop" />
         <activity android:name="com.example.foodMateFrontend.ReviewDetailActivity" />
-        <activity android:name="com.example.foodMateFrontend.menu_activities.AddMenuActivity" />
         <activity android:name="com.example.foodMateFrontend.UserActivity" />
 
         <provider

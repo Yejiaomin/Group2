@@ -8,12 +8,9 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface MenuItemApiService {
-    // 添加菜单项
-    @POST("api/menu/add")
-    Call<Void> addMenuItem(@Body MenuItem menuItem);
-
-    // 获取所有菜单项
-    @GET("api/menu/all")
+    @GET("menu-items")
     Call<List<MenuItem>> getAllMenuItems();
 
+    @POST("menu-items")
+    Call<MenuItem> addMenuItem(@Body MenuItem menuItem);
 }

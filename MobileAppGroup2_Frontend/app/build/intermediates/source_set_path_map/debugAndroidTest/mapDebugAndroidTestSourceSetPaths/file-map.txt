@@ -1,5 +1,5 @@
-com.example.foodMateFrontend.test.app-core-1.6.1-0 C:\Users\Ziting\.gradle\caches\transforms-4\5247543d0ab062a16776623faee83895\transformed\core-1.6.1\res
-com.example.foodMateFrontend.test.app-androidTest-1 D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\build\generated\res\resValues\androidTest\debug
-com.example.foodMateFrontend.test.app-mergeDebugAndroidTestResources-2 D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
-com.example.foodMateFrontend.test.app-mergeDebugAndroidTestResources-3 D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
-com.example.foodMateFrontend.test.app-debugAndroidTest-4 D:\yxs\Github\Group2\MobileAppGroup2_Frontend\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
+com.example.foodMateFrontend.test.app-core-1.6.1-0 /Users/admin/.gradle/caches/transforms-4/5247543d0ab062a16776623faee83895/transformed/core-1.6.1/res
+com.example.foodMateFrontend.test.app-androidTest-1 /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/build/generated/res/resValues/androidTest/debug
+com.example.foodMateFrontend.test.app-mergeDebugAndroidTestResources-2 /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.example.foodMateFrontend.test.app-mergeDebugAndroidTestResources-3 /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.example.foodMateFrontend.test.app-debugAndroidTest-4 /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources

@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.foodMateFrontend" parent="Base.Theme.foodMateFrontend" />
+
+    <style name="Theme.FoodMateFrontend" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
 </resources>

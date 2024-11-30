@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.foodMateFrontend.model.LoginRequest;
 import com.example.foodMateFrontend.model.LoginResponse;
+import com.example.foodMateFrontend.menu_activities.MenuListActivity;
 
 import java.util.Map;
 
@@ -106,7 +107,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 if (response.isSuccessful() && response.body() != null && response.body().isAuthenticated()) {
-                    navigateToRestaurantActivity();
+                    navigateToMenuListActivity();
                 } else {
                     Toast.makeText(LoginActivity.this, "Incorrect email or password", Toast.LENGTH_SHORT).show();
                 }
@@ -119,8 +120,8 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void navigateToRestaurantActivity() {
-        Intent intent = new Intent(LoginActivity.this, RestaurantActivity.class);
+    private void navigateToMenuListActivity() {
+        Intent intent = new Intent(LoginActivity.this, MenuListActivity.class);
         startActivity(intent);
         finish();
     }
