@@ -3657,6 +3657,7 @@ id appName
 id appetizers_arrow
 id appetizers_card
 id appetizers_content
+id appetizers_count
 id appetizers_header
 id appleIcon
 id arc
@@ -3840,6 +3841,7 @@ id design_navigation_view
 id desserts_arrow
 id desserts_card
 id desserts_content
+id desserts_count
 id desserts_header
 id dialog_button
 id dimensions
@@ -3861,6 +3863,7 @@ id dragUp
 id drinks_arrow
 id drinks_card
 id drinks_content
+id drinks_count
 id drinks_header
 id dropdown
 id dropdown_menu
@@ -3884,6 +3887,7 @@ id enterAlwaysCollapsed
 id entrees_arrow
 id entrees_card
 id entrees_content
+id entrees_count
 id entrees_header
 id errorMessage
 id escape
@@ -4076,7 +4080,6 @@ id open_search_view_toolbar
 id open_search_view_toolbar_container
 id openingTime
 id othersCombo
-id othersReview
 id outline
 id outward
 id overshoot
@@ -4099,8 +4102,6 @@ id preference
 id pressed
 id primarySwitch
 id profileAddress
-id profileContact
-id profileHours
 id profileName
 id progressBar
 id progress_circular
@@ -4412,14 +4413,13 @@ layout abc_tooltip
 layout activity_add_menu
 layout activity_combo_detail
 layout activity_combo_list
+layout activity_favorite
 layout activity_login
 layout activity_main
 layout activity_menu_detail
 layout activity_menu_list
-layout activity_profile
 layout activity_register
 layout activity_restaurant
-layout activity_review_detail
 layout activity_user
 layout car_ui_alert_dialog_edit_text
 layout car_ui_alert_dialog_list
@@ -4506,8 +4506,6 @@ layout dialog_add_menu_item
 layout dialog_menu_item_details
 layout expand_button
 layout fragment_combo
-layout fragment_menu
-layout fragment_review
 layout image_frame
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity

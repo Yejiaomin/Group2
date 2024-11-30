@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.foodMateFrontend.R;
 import com.example.foodMateFrontend.menu_activities.MenuListActivity;
-import com.example.foodMateFrontend.profile_activities.ProfileActivity;
+import com.example.foodMateFrontend.favorite_activities.FavoriteActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ComboListActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
@@ -34,7 +34,7 @@ public class ComboListActivity extends AppCompatActivity implements BottomNaviga
             startActivity(new Intent(this, MenuListActivity.class));
         } else if (itemId == R.id.nav_profile) {
             // 跳转到 ProfileActivity
-            startActivity(new Intent(this, ProfileActivity.class));
+            startActivity(new Intent(this, FavoriteActivity.class));
         }
 
         return true;

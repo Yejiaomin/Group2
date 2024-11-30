@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/menu-items")
@@ -44,6 +45,30 @@ public class MenuItemController {
             return ResponseEntity.ok(items);
         } catch (Exception e) {
             logger.error("Error fetching menu items for category {}: ", category, e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
+    @GetMapping("/category-counts")
+    public ResponseEntity<Map<String, Long>> getCategoryCounts() {
+        try {
+            logger.info("Fetching category counts");
+            Map<String, Long> counts = menuItemService.getCategoryCounts();
+            return ResponseEntity.ok(counts);
+        } catch (Exception e) {
+            logger.error("Error fetching category counts: ", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
+    @GetMapping("/category/{category}/count")
+    public ResponseEntity<Long> getCategoryCount(@PathVariable String category) {
+        try {
+            logger.info("Fetching count for category: {}", category);
+            long count = menuItemService.getCategoryCount(category);
+            return ResponseEntity.ok(count);
+        } catch (Exception e) {
+            logger.error("Error fetching count for category {}: ", category, e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }

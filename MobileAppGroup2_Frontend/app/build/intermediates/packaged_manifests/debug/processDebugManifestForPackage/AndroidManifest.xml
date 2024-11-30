@@ -62,10 +62,8 @@
             android:name="com.example.foodMateFrontend.combo_activities.ComboListActivity"
             android:launchMode="singleTop" />
         <activity
-            android:name="com.example.foodMateFrontend.profile_activities.ProfileActivity"
+            android:name="com.example.foodMateFrontend.favorite_activities.FavoriteActivity"
             android:launchMode="singleTop" />
-        <activity android:name="com.example.foodMateFrontend.ReviewDetailActivity" />
-        <activity android:name="com.example.foodMateFrontend.UserActivity" />
 
         <provider
             android:name="com.android.car.ui.core.CarUiInstaller"

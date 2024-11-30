@@ -32,10 +32,8 @@
             android:launchMode="singleTop" /> <!-- 确保使用单实例 -->
         <activity android:name=".combo_activities.ComboListActivity"
             android:launchMode="singleTop" />
-        <activity android:name=".profile_activities.ProfileActivity"
+        <activity android:name=".favorite_activities.FavoriteActivity"
             android:launchMode="singleTop" />
-        <activity android:name=".ReviewDetailActivity" />
-        <activity android:name=".UserActivity" />
     </application>
 
 

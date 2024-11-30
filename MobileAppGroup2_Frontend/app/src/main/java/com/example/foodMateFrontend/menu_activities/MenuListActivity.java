@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodMateFrontend.R;
@@ -30,7 +29,7 @@ import android.widget.Spinner;
 import android.widget.ImageButton;
 
 import com.example.foodMateFrontend.combo_activities.ComboListActivity;
-import com.example.foodMateFrontend.profile_activities.ProfileActivity;
+import com.example.foodMateFrontend.favorite_activities.FavoriteActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -158,35 +157,9 @@ public class MenuListActivity extends AppCompatActivity implements BottomNavigat
             @Override
             public void onResponse(retrofit2.Call<MenuItem> call, retrofit2.Response<MenuItem> response) {
                 if (response.isSuccessful() && response.body() != null) {
-                    LinearLayout contentLayout = null;
-                    switch (newItem.getCategory().toLowerCase()) {
-                        case "appetizers":
-                            contentLayout = findViewById(R.id.appetizers_content);
-                            break;
-                        case "entrees":
-                            contentLayout = findViewById(R.id.entrees_content);
-                            break;
-                        case "desserts":
-                            contentLayout = findViewById(R.id.desserts_content);
-                            break;
-                        case "drinks":
-                            contentLayout = findViewById(R.id.drinks_content);
-                            break;
-                    }
-
-                    if (contentLayout != null) {
-                        // Add new item to the category's content
-                        TextView newItemView = new TextView(MenuListActivity.this);
-                        newItemView.setLayoutParams(new LinearLayout.LayoutParams(
-                                LinearLayout.LayoutParams.MATCH_PARENT,
-                                LinearLayout.LayoutParams.WRAP_CONTENT));
-                        newItemView.setText(String.format("%s - $%.2f", newItem.getName(), newItem.getPrice()));
-                        newItemView.setPadding(32, 32, 32, 32);
-                        newItemView.setTextSize(16);
-                        contentLayout.addView(newItemView);
-                    }
-
                     showErrorMessage("Item added successfully");
+                    // Refresh the entire category to update count and items
+                    fetchMenuItemsByCategory();
                 } else {
                     showErrorMessage("Failed to add item");
                 }
@@ -211,7 +184,7 @@ public class MenuListActivity extends AppCompatActivity implements BottomNavigat
             startActivity(new Intent(this, MenuListActivity.class));
         } else if (itemId == R.id.nav_profile) {
             // 跳转到 ProfileActivity
-            startActivity(new Intent(this, ProfileActivity.class));
+            startActivity(new Intent(this, FavoriteActivity.class));
         }
 
         return true;
@@ -280,7 +253,12 @@ public class MenuListActivity extends AppCompatActivity implements BottomNavigat
             public void onResponse(retrofit2.Call<List<MenuItem>> call, retrofit2.Response<List<MenuItem>> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     contentLayout.removeAllViews();
-                    for (MenuItem item : response.body()) {
+                    List<MenuItem> items = response.body();
+                    
+                    // Update item count
+                    updateItemCount(category, items.size());
+                    
+                    for (MenuItem item : items) {
                         TextView itemView = new TextView(MenuListActivity.this);
                         itemView.setLayoutParams(new LinearLayout.LayoutParams(
                                 LinearLayout.LayoutParams.MATCH_PARENT,
@@ -307,6 +285,29 @@ public class MenuListActivity extends AppCompatActivity implements BottomNavigat
                 showErrorMessage("Network error loading " + category + ": " + t.getMessage());
             }
         });
+    }
+
+    private void updateItemCount(String category, int count) {
+        TextView countView = null;
+        switch (category.toLowerCase()) {
+            case "appetizers":
+                countView = findViewById(R.id.appetizers_count);
+                break;
+            case "entrees":
+                countView = findViewById(R.id.entrees_count);
+                break;
+            case "desserts":
+                countView = findViewById(R.id.desserts_count);
+                break;
+            case "drinks":
+                countView = findViewById(R.id.drinks_count);
+                break;
+        }
+        
+        if (countView != null) {
+            String itemText = count == 1 ? "item" : "items";
+            countView.setText(count + " " + itemText);
+        }
     }
 
     private void showItemDetailsDialog(MenuItem item) {

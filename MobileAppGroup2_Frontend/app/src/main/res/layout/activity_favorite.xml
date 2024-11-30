@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F5E9E2">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -21,7 +22,7 @@
                 android:id="@+id/profileName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Restaurant Name"
+                android:text="Favorite Combo"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp" />
@@ -30,25 +31,10 @@
                 android:id="@+id/profileAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Address: 123 Main St, San Jose, CA"
+                android:text="Having favorite combo here"
                 android:textSize="16sp"
                 android:layout_marginBottom="8dp" />
 
-            <TextView
-                android:id="@+id/profileContact"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Contact: +1 234 567 890"
-                android:textSize="16sp"
-                android:layout_marginBottom="8dp" />
-
-            <TextView
-                android:id="@+id/profileHours"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Opening Hours: 10:00 AM - 9:00 PM"
-                android:textSize="16sp"
-                android:layout_marginBottom="8dp" />
         </LinearLayout>
     </ScrollView>
 

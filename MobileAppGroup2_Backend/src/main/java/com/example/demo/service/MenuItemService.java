@@ -5,7 +5,9 @@ import com.example.demo.repository.MenuItemRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class MenuItemService {
@@ -22,6 +24,21 @@ public class MenuItemService {
 
     public List<MenuItem> getMenuItemsByCategory(String category) {
         return menuItemRepository.findByCategory(category.toLowerCase());
+    }
+
+    public Map<String, Long> getCategoryCounts() {
+        List<Object[]> results = menuItemRepository.getCategoryCounts();
+        Map<String, Long> counts = new HashMap<>();
+        for (Object[] result : results) {
+            String category = (String) result[0];
+            Long count = (Long) result[1];
+            counts.put(category, count);
+        }
+        return counts;
+    }
+
+    public long getCategoryCount(String category) {
+        return menuItemRepository.countByCategory(category.toLowerCase());
     }
 
     public MenuItem addMenuItem(MenuItem menuItem) {

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:2:1-43:12
+ADDED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:2:1-41:12
 MERGED from [com.google.android.material:material:1.12.0] /Users/admin/.gradle/caches/transforms-4/3f92aa7bd877c3ed5427b5d0f8cf07de/transformed/material-1.12.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.car.ui:car-ui-lib:2.6.0] /Users/admin/.gradle/caches/transforms-4/095b0839bef28d5b2a06db335cc653ca/transformed/car-ui-lib-2.6.0/AndroidManifest.xml:17:1-51:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] /Users/admin/.gradle/caches/transforms-4/1d7529420e80c033b391c17ea88760d7/transformed/constraintlayout-2.2.0/AndroidManifest.xml:2:1-9:12
@@ -62,8 +62,8 @@ ADDED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/And
 	android:name
 		ADDED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:7:5-39:19
-INJECTED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:7:5-39:19
+ADDED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:7:5-37:19
+INJECTED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:7:5-37:19
 MERGED from [com.google.android.material:material:1.12.0] /Users/admin/.gradle/caches/transforms-4/3f92aa7bd877c3ed5427b5d0f8cf07de/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] /Users/admin/.gradle/caches/transforms-4/3f92aa7bd877c3ed5427b5d0f8cf07de/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.car.ui:car-ui-lib:2.6.0] /Users/admin/.gradle/caches/transforms-4/095b0839bef28d5b2a06db335cc653ca/transformed/car-ui-lib-2.6.0/AndroidManifest.xml:36:5-49:19
@@ -150,20 +150,12 @@ ADDED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/And
 		ADDED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:34:13-43
 	android:name
 		ADDED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:33:19-69
-activity#com.example.foodMateFrontend.profile_activities.ProfileActivity
+activity#com.example.foodMateFrontend.favorite_activities.FavoriteActivity
 ADDED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:35:9-36:46
 	android:launchMode
 		ADDED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:36:13-43
 	android:name
-		ADDED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:35:19-69
-activity#com.example.foodMateFrontend.ReviewDetailActivity
-ADDED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:37:9-58
-	android:name
-		ADDED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:37:19-55
-activity#com.example.foodMateFrontend.UserActivity
-ADDED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:38:9-50
-	android:name
-		ADDED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:38:19-47
+		ADDED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml:35:19-71
 uses-sdk
 INJECTED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/admin/Desktop/Group2/MobileAppGroup2_Frontend/app/src/main/AndroidManifest.xml

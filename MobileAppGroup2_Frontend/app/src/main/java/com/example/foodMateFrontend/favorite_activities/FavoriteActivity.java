@@ -1,4 +1,4 @@
-package com.example.foodMateFrontend.profile_activities;
+package com.example.foodMateFrontend.favorite_activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,11 +10,11 @@ import com.example.foodMateFrontend.menu_activities.MenuListActivity;
 import com.example.foodMateFrontend.combo_activities.ComboListActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class ProfileActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
+public class FavoriteActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_favorite);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.nav_profile); // Set profile as selected
@@ -33,7 +33,7 @@ public class ProfileActivity extends AppCompatActivity implements BottomNavigati
             startActivity(new Intent(this, MenuListActivity.class));
         } else if (itemId == R.id.nav_profile) {
             // 跳转到 ProfileActivity
-            startActivity(new Intent(this, ProfileActivity.class));
+            startActivity(new Intent(this, FavoriteActivity.class));
         }
 
         return true;
