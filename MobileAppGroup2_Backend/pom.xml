@@ -31,12 +31,14 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
+
 		<!-- MySQL Connector -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
+			<version>8.0.33</version> <!-- Replace with the latest stable version -->
 		</dependency>
+
 
 		<!-- Lombok (Optional) -->
 		<dependency>

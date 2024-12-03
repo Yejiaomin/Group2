@@ -4,6 +4,93 @@
     <shared>
       <config />
     </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/combo_generator_icon.xml">
+        <config>
+          <theme>@style/Theme.foodMateFrontend</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_menu.xml">
+        <config>
+          <theme>@style/Theme.foodMateFrontend</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_combo_detail.xml">
+        <config>
+          <theme>@style/Theme.foodMateFrontend</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_combo_list.xml">
+        <config>
+          <theme>@style/Theme.foodMateFrontend</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_favorite.xml">
+        <config>
+          <theme>@style/Theme.foodMateFrontend</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+        <config>
+          <theme>@style/Theme.foodMateFrontend</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+        <config>
+          <theme>@style/Theme.foodMateFrontend</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_menu_detail.xml">
+        <config>
+          <theme>@style/Theme.foodMateFrontend</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_restaurant.xml">
+        <config>
+          <theme>@style/Theme.foodMateFrontend</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_user.xml">
+        <config>
+          <theme>@style/Theme.foodMateFrontend</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_combo.xml">
+        <config>
+          <theme>@style/Theme.foodMateFrontend</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_menu.xml">
+        <config>
+          <theme>@style/Theme.foodMateFrontend</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_review.xml">
+        <config>
+          <theme>@style/Theme.foodMateFrontend</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_favorite_combo.xml">
+        <config>
+          <theme>@style/Theme.foodMateFrontend</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/menu_item.xml">
+        <config>
+          <theme>@style/Theme.foodMateFrontend</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml">
+        <config>
+          <theme>@style/Theme.foodMateFrontend</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_add.xml">
+        <config>
+          <theme>@style/Theme.foodMateFrontend</theme>
+        </config>
+      </layout>
+    </layouts>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
@@ -11,6 +98,12 @@
   <component name="ChangeListManager">
     <list default="true" id="fa7d9af6-7f7f-41e0-a1d8-aac0c87ec18e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileAppGroup2_Backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileAppGroup2_Backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileAppGroup2_Backend/src/main/java/com/example/demo/controller/ComboController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileAppGroup2_Backend/src/main/java/com/example/demo/controller/ComboController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileAppGroup2_Backend/src/main/java/com/example/demo/entity/Combo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileAppGroup2_Backend/src/main/java/com/example/demo/entity/Combo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileAppGroup2_Backend/src/main/java/com/example/demo/repository/ComboRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileAppGroup2_Backend/src/main/java/com/example/demo/repository/ComboRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MobileAppGroup2_Backend/src/main/java/com/example/demo/service/ComboService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileAppGroup2_Backend/src/main/java/com/example/demo/service/ComboService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +113,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=Default, isTemplate=false, identifier=serial=emulator-5556;connection=8798f22f)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\wchli\.android\avd\Pixel_8_Pro_API_35.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -64,6 +157,16 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="resourceFile" />
+        <option value="Class" />
+        <option value="layoutResourceFile" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -76,9 +179,12 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Yejiaomin/Group2.git&quot;,
-    &quot;accountId&quot;: &quot;94168b34-24db-4516-9ee5-12d759b844a6&quot;
+    &quot;accountId&quot;: &quot;1bd8dcf9-c373-4b04-b143-020df57a7336&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 1
@@ -88,19 +194,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Android App.app.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/yxs/Github/Group2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Android App.app.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "ScreenshotViewer.SavePath": "E:/CodeProject/Test",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "1121test",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/CodeProject/Group2/wenxinbranch/Group2-wenxin_branch/MobileAppGroup2_Frontend",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="FoodMateFrontend.app.main" />

@@ -2,20 +2,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/nav_combos"
-        android:icon="@android:drawable/ic_menu_agenda"
-        android:title="Combos"
-        app:showAsAction="ifRoom" />
-
-    <item
         android:id="@+id/nav_menus"
-        android:icon="@android:drawable/ic_menu_manage"
+        android:icon="@drawable/menu_icon"
         android:title="Menus"
         app:showAsAction="ifRoom" />
 
     <item
+        android:id="@+id/nav_combos"
+        android:icon="@drawable/cg"
+        android:title="Combogenerator"
+        app:showAsAction="ifRoom" />
+
+    <item
         android:id="@+id/nav_profile"
-        android:icon="@android:drawable/ic_menu_myplaces"
-        android:title="Profile"
+        android:icon="@drawable/favorite_icon"
+        android:title="favorite"
         app:showAsAction="ifRoom" />
 </menu>

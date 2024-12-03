@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.foodMateFrontend.combo_activities.ComboListActivity;
+import com.example.foodMateFrontend.favorite.FavoriteActivity;
 import com.example.foodMateFrontend.menu_activities.MenuListActivity;
 import com.example.foodMateFrontend.menu_activities.ProfileActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -38,7 +39,7 @@ public class RestaurantActivity extends AppCompatActivity implements BottomNavig
             startActivity(new Intent(this, MenuListActivity.class));
         } else if (itemId == R.id.nav_profile) {
             // 跳转到 ProfileActivity
-            startActivity(new Intent(this, ProfileActivity.class));
+            startActivity(new Intent(this, FavoriteActivity.class));
         }
 
         return true;

@@ -1,27 +1,52 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
-
-import java.util.List;
 
 @Entity
-@Data
 public class Combo {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name; // 套餐名称
-    private Double price; // 价格
-    private Integer servesPeople; // 适合人数
+    @Column(nullable = false)
+    private String name;
 
-    @ManyToMany
-    @JoinTable(
-            name = "combo_menu_items",
-            joinColumns = @JoinColumn(name = "combo_id"),
-            inverseJoinColumns = @JoinColumn(name = "menu_item_id")
-    )
-    private List<MenuItem> items; // 菜品列表
+    @Column(nullable = false)
+    private Double price;
+
+    @Column(name = "is_favorite", nullable = false)
+    private boolean isFavorite = false;
+
+    // Getters and Setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public boolean isFavorite() {
+        return isFavorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        isFavorite = favorite;
+    }
 }

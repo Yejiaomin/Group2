@@ -3429,14 +3429,20 @@ drawable car_ui_toolbar_menu_item_icon_background
 drawable car_ui_toolbar_menu_item_icon_ripple
 drawable car_ui_toolbar_search_close_icon
 drawable car_ui_toolbar_search_search_icon
+drawable cg
 drawable checkbox_checked
 drawable checkbox_unchecked
+drawable combo_generator_icon
+drawable combogenerator
 drawable custom_checkbox
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable fav
+drawable favorite
+drawable favorite_icon
 drawable food_image
 drawable google_icon
 drawable ic_arrow_back_black_24
@@ -3483,6 +3489,8 @@ drawable material_ic_keyboard_arrow_previous_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable menu
+drawable menu_icon
 drawable mtrl_bottomsheet_drag_handle
 drawable mtrl_checkbox_button
 drawable mtrl_checkbox_button_checked_unchecked
@@ -3656,6 +3664,7 @@ id bordered
 id borderless
 id bottom
 id bottomNavigationView
+id bottom_navi
 id bounce
 id bounceBoth
 id bounceEnd
@@ -3781,6 +3790,9 @@ id collapseActionView
 id combo1
 id combo2
 id combo3
+id combo_details
+id combo_name
+id combo_price
 id compress
 id confirm_button
 id constraint
@@ -3849,6 +3861,8 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
+id favorite_recycler_view
+id favorite_title
 id fill
 id fill_horizontal
 id fill_vertical
@@ -4358,6 +4372,7 @@ layout abc_tooltip
 layout activity_add_menu
 layout activity_combo_detail
 layout activity_combo_list
+layout activity_favorite
 layout activity_login
 layout activity_main
 layout activity_menu_detail
@@ -4455,6 +4470,7 @@ layout fragment_review
 layout image_frame
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_favorite_combo
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

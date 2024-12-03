@@ -40,9 +40,14 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.car.ui.lib)
+    implementation("com.google.android.material:material:1.9.0") // 版本号可以根据最新版本选择
+
+
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
 
 
 }

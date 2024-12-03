@@ -67,6 +67,7 @@
         <activity android:name="com.example.foodMateFrontend.ReviewDetailActivity" />
         <activity android:name="com.example.foodMateFrontend.menu_activities.AddMenuActivity" />
         <activity android:name="com.example.foodMateFrontend.UserActivity" />
+        <activity android:name="com.example.foodMateFrontend.favorite.FavoriteActivity" />
 
         <provider
             android:name="com.android.car.ui.core.CarUiInstaller"
