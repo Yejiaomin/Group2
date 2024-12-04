@@ -1,0 +1,10 @@
+POST http://localhost:8080/api/menu-items/generateCombos
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-12-03T153612.200.txt
+
+###
+

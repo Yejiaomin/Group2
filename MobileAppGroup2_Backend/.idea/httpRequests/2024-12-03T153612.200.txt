@@ -1,0 +1,46 @@
+Combo 1: 
+
+Name: "Refreshing Sweet and Sour Combo"
+Category: Beverage & Dessert
+Items: 
+Sprite: $5.00
+Strawberry Cake: $6.00
+Total: $11.00
+
+Combo 2:
+
+Name: "Savory and Sweet Treat Combo"
+Category: Entree & Dessert  
+Items:
+Pineapple Rice: $15.00
+Strawberry Cake: $6.00
+Total: $21.00
+
+Combo 3: 
+
+Name: "Crunchy Delight Combo"
+Category: Appetizer & Beverage
+Items:  
+Pickle: $10.00
+Coke: $3.00
+Total: $13.00
+
+Combo 4:
+
+Name: "Tropical Fiesta Combo" 
+Category: Entree & Beverage  
+Items:
+Pineapple Rice: $15.00
+Sprite: $5.00
+Total: $20.00
+
+Combo 5:
+
+Name: "All-Rounder Combo"
+Category: Full Meal (Appetizer, Entree, Dessert & Beverage)
+Items:
+Pickle: $10.00
+Pineapple Rice: $15.00
+Strawberry Cake: $6.00
+Coke: $3.00
+Total: $34.00
