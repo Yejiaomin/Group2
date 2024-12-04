@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import com.example.foodMateFrontend.R;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 

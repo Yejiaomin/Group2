@@ -3,7 +3,7 @@ package com.example.owner.combo_activities;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.owner.R;
+import com.example.foodMateFrontend.R;
 
 public class ComboListActivity extends AppCompatActivity {
     @Override

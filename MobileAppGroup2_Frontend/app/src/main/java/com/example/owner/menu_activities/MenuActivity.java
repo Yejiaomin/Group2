@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.owner.R;
+import com.example.foodMateFrontend.R;
 import com.example.owner.RetrofitClient;
 
 import java.util.List;

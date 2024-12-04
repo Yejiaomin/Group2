@@ -17,6 +17,10 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -29,10 +33,14 @@ public class MenuItemService {
 
     private final MenuItemRepository menuItemRepository;
     private static final Logger logger = LoggerFactory.getLogger(MenuItemService.class);
+    private String mockDataFilePath;
 
 
     public MenuItemService(MenuItemRepository menuItemRepository) {
         this.menuItemRepository = menuItemRepository;
+    }
+    public void setMockDataFilePath(String mockDataFilePath) {
+        this.mockDataFilePath = mockDataFilePath;
     }
 
     public List<MenuItem> getAllMenuItems() {
@@ -84,6 +92,9 @@ public class MenuItemService {
         return false;
     }
     public String generateComboFromChatGPT(Map<String, Object> chatGptRequest) {
+        if (mockDataFilePath == null || mockDataFilePath.isEmpty()) {
+            throw new RuntimeException("Mock data file path is not set. Please upload a file first.");
+        }
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -92,8 +103,23 @@ public class MenuItemService {
         String menuItemsContent = (String)menuItems.stream().map((item) -> {
             return String.format("%s (%s) - $%.2f", item.getName(), item.getCategory() == null ? "No category" : item.getCategory(), item.getPrice());
         }).collect(Collectors.joining("\n"));
-        String prompt = "Here are the available menu items:\n\n" + menuItemsContent + "\n\nPlease create a combo and must only using these menu items and label the category and generate appropriate combo name for each combo.";
-        headers.set("Authorization", "Bearer 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");
+//        File mockDataFile = new File("C:\\Users\\wchli\\Documents\\WeChat Files\\wxid_06hy5oypkzx422\\FileStorage\\File\\2024-12\\MOCK_DATA(2).json");
+
+        // 读取文件内容为字符串
+        String mockDataContent;
+        try {
+            File mockDataFile = new File(mockDataFilePath);
+            mockDataContent = new String(Files.readAllBytes(mockDataFile.toPath()), StandardCharsets.UTF_8);
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to read mock data file", e);
+        }
+        String prompt = "Here are the available menu items from our database:\n\n" +
+                menuItemsContent +
+                "\n\nAdditionally, here is customer order data in JSON format:\n\n" +
+                mockDataContent +
+                "\n\n analyze the order data and suggest combo and only display the combo no extra talk before or after!i just want the result of combo and in format of combo1,combo2.";
+
+        headers.set("Authorization", "Bearer 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");
         if (!chatGptRequest.containsKey("model")) {
             chatGptRequest.put("model", "gpt-4");
         }

@@ -11,6 +11,7 @@ import com.example.owner.combo_activities.ComboListActivity;
 import com.example.owner.menu_activities.MenuListActivity;
 import com.example.owner.menu_activities.ProfileActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.example.foodMateFrontend.R;
 
 public class RestaurantActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 

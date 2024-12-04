@@ -2,6 +2,7 @@ package com.example.owner;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import com.example.foodMateFrontend.R;
 
 public class ReviewDetailActivity extends AppCompatActivity {
     @Override

@@ -9,7 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -62,6 +66,29 @@ public class MenuItemController {
         } catch (Exception var4) {
             logger.error("Error generating combos: ", var4);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error generating combos: " + var4.getMessage());
+        }
+    }
+    @PostMapping("/importData")
+    public ResponseEntity<String> uploadMockDataFile(@RequestParam("file") MultipartFile file) {
+        try {
+            // Save the mock data file to a temporary directory
+            Path tempFile = Files.createTempFile("mockData", ".json");
+            file.transferTo(tempFile.toFile());
+
+            // Store the file path for subsequent use
+            String filePath = tempFile.toAbsolutePath().toString();
+            menuItemService.setMockDataFilePath(filePath);
+            // Confirm the file exists
+            if (Files.exists(tempFile)) {
+                System.out.println("File saved at: " + filePath);
+            } else {
+                System.out.println("File does not exist at: " + filePath);
+            }
+
+            return ResponseEntity.ok("File uploaded successfully: " + filePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to upload file");
         }
     }
 

@@ -12,8 +12,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.owner.R;
+import com.example.foodMateFrontend.R;
 import com.example.owner.RetrofitClient;
 
 import java.io.IOException;
