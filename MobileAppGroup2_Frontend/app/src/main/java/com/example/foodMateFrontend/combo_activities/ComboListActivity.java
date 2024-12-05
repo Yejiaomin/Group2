@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -43,11 +46,12 @@ public class ComboListActivity extends AppCompatActivity implements BottomNaviga
     private Button decrementDrink, incrementDrink;
     private Button generateComboButton;
     private Button importDataButton;
-    private EditText appetizerCount, entreeCount, dessertCount, drinkCount;
+    private EditText appetizerCountText, entreeCountText, dessertCountText, drinkCountText;
+    private EditText minPriceText, maxPriceText, comboNumText;
     private MenuItemApiService menuItemApiService;
     private static final int FILE_PICKER_REQUEST_CODE = 1;
     private Uri selectedFileUri;
-    private int appetizerNum, entreeNum, dessertNum, drinkNum;
+    private int appetizerNum, entreeNum, dessertNum, drinkNum, minPrice, maxPrice, comboNum;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
@@ -67,21 +71,31 @@ public class ComboListActivity extends AppCompatActivity implements BottomNaviga
         // Initialize combo generator parameters
         sharedPreferences = getSharedPreferences("comboGeneratorParams", MODE_PRIVATE);
         editor = sharedPreferences.edit();
-        appetizerCount = findViewById(R.id.appetizer_count);
-        entreeCount = findViewById(R.id.entree_count);
-        dessertCount = findViewById(R.id.dessert_count);
-        drinkCount = findViewById(R.id.drink_count);
+        appetizerCountText = findViewById(R.id.appetizer_count);
+        entreeCountText = findViewById(R.id.entree_count);
+        dessertCountText = findViewById(R.id.dessert_count);
+        drinkCountText = findViewById(R.id.drink_count);
+        minPriceText = findViewById(R.id.minPriceInput);
+        maxPriceText = findViewById(R.id.maxPriceInput);
+        comboNumText = findViewById(R.id.comboNumberInput);
+
 
         // Retrieve parameters from api if exists
         appetizerNum = sharedPreferences.getInt("AppetizerNum", 0);
         entreeNum = sharedPreferences.getInt("EntreeNum", 0);
         dessertNum = sharedPreferences.getInt("DessertNum", 0);
         drinkNum = sharedPreferences.getInt("DrinkNum", 0);
+        minPrice = sharedPreferences.getInt("MinPrice", 0);
+        maxPrice = sharedPreferences.getInt("MaxPrice", 0);
+        comboNum = sharedPreferences.getInt("ComboNum", 0);
 
-        appetizerCount.setText(String.valueOf(appetizerNum));
-        entreeCount.setText(String.valueOf(entreeNum));
-        dessertCount.setText(String.valueOf(dessertNum));
-        drinkCount.setText(String.valueOf(drinkNum));
+        appetizerCountText.setText(String.valueOf(appetizerNum));
+        entreeCountText.setText(String.valueOf(entreeNum));
+        dessertCountText.setText(String.valueOf(dessertNum));
+        drinkCountText.setText(String.valueOf(drinkNum));
+        minPriceText.setText(minPrice == 0 ? String.valueOf(""): String.valueOf(minPrice));
+        maxPriceText.setText(maxPrice == 0 ? String.valueOf(""): String.valueOf(maxPrice));
+        comboNumText.setText(comboNum == 0 ? String.valueOf(""): String.valueOf(comboNum));
 
         // 初始化生成按钮
         decrementAppetizer = findViewById(R.id.decrement_appetizer);
@@ -97,7 +111,7 @@ public class ComboListActivity extends AppCompatActivity implements BottomNaviga
             @Override
             public void onClick(View view) {
                 if (appetizerNum > 0) appetizerNum--;
-                appetizerCount.setText(String.valueOf(appetizerNum));
+                appetizerCountText.setText(String.valueOf(appetizerNum));
                 updateParam("AppetizerNum");
             }
         });
@@ -105,7 +119,7 @@ public class ComboListActivity extends AppCompatActivity implements BottomNaviga
             @Override
             public void onClick(View view) {
                 appetizerNum++;
-                appetizerCount.setText(String.valueOf(appetizerNum));
+                appetizerCountText.setText(String.valueOf(appetizerNum));
                 updateParam("AppetizerNum");
             }
         });
@@ -113,7 +127,7 @@ public class ComboListActivity extends AppCompatActivity implements BottomNaviga
             @Override
             public void onClick(View view) {
                 if (entreeNum > 0) entreeNum--;
-                entreeCount.setText(String.valueOf(entreeNum));
+                entreeCountText.setText(String.valueOf(entreeNum));
                 updateParam("EntreeNum");
             }
         });
@@ -121,7 +135,7 @@ public class ComboListActivity extends AppCompatActivity implements BottomNaviga
             @Override
             public void onClick(View view) {
                 entreeNum++;
-                entreeCount.setText(String.valueOf(entreeNum));
+                entreeCountText.setText(String.valueOf(entreeNum));
                 updateParam("EntreeNum");
             }
         });
@@ -129,7 +143,7 @@ public class ComboListActivity extends AppCompatActivity implements BottomNaviga
             @Override
             public void onClick(View view) {
                 if (dessertNum > 0) dessertNum--;
-                dessertCount.setText(String.valueOf(dessertNum));
+                dessertCountText.setText(String.valueOf(dessertNum));
                 updateParam("DessertNum");
             }
         });
@@ -137,7 +151,7 @@ public class ComboListActivity extends AppCompatActivity implements BottomNaviga
             @Override
             public void onClick(View view) {
                 dessertNum++;
-                dessertCount.setText(String.valueOf(dessertNum));
+                dessertCountText.setText(String.valueOf(dessertNum));
                 updateParam("DessertNum");
             }
         });
@@ -145,7 +159,7 @@ public class ComboListActivity extends AppCompatActivity implements BottomNaviga
             @Override
             public void onClick(View view) {
                 if (drinkNum > 0) drinkNum--;
-                drinkCount.setText(String.valueOf(drinkNum));
+                drinkCountText.setText(String.valueOf(drinkNum));
                 updateParam("DrinkNum");
             }
         });
@@ -153,8 +167,32 @@ public class ComboListActivity extends AppCompatActivity implements BottomNaviga
             @Override
             public void onClick(View view) {
                 drinkNum++;
-                drinkCount.setText(String.valueOf(drinkNum));
+                drinkCountText.setText(String.valueOf(drinkNum));
                 updateParam("DrinkNum");
+            }
+        });
+
+        minPriceText.addTextChangedListener(new SimpleTextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                minPrice = Integer.parseInt(minPriceText.getText().toString());
+                updateParam("MinPrice");
+            }
+        });
+
+        maxPriceText.addTextChangedListener(new SimpleTextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                maxPrice = Integer.parseInt(maxPriceText.getText().toString());
+                updateParam("MaxPrice");
+            }
+        });
+
+        comboNumText.addTextChangedListener(new SimpleTextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                comboNum = Integer.parseInt(comboNumText.getText().toString());
+                updateParam("ComboNum");
             }
         });
 
@@ -252,6 +290,15 @@ public class ComboListActivity extends AppCompatActivity implements BottomNaviga
                 break;
             case "DrinkNum":
                 editor.putInt("DrinkNum", drinkNum);
+                break;
+            case "MinPrice":
+                editor.putInt("MinPrice", minPrice);
+                break;
+            case "MaxPrice":
+                editor.putInt("MaxPrice", maxPrice);
+                break;
+            case "ComboNum":
+                editor.putInt("ComboNum", comboNum);
                 break;
         }
         editor.apply();
