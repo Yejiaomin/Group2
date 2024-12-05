@@ -117,9 +117,9 @@ public class MenuItemService {
                 menuItemsContent +
                 "\n\nAdditionally, here is customer order data in JSON format:\n\n" +
                 mockDataContent +
-                "\n\n analyze the order data and suggest combo and only display the combo no extra talk before or after!i just want the result of combo and in format of combo1,combo2.";
+                "\n\n analyze the order data and suggest combo and only display the combo no extra talk before or after!i just want the result of combo, and in format of combo1：dish1,dish2...,combo2:dish1,dish2：and so on also shows each combo's total price,also ensure every combo's dish is unique.";
 
-        headers.set("Authorization", "Bearer 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");
+        headers.set("Authorization", "Bearer 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");
         if (!chatGptRequest.containsKey("model")) {
             chatGptRequest.put("model", "gpt-4");
         }

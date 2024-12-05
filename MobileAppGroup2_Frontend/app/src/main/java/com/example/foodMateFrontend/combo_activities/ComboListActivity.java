@@ -165,26 +165,31 @@ public class ComboListActivity extends AppCompatActivity implements BottomNaviga
             MultipartBody.Part body = MultipartBody.Part.createFormData("file", file.getName(), requestFile);
 
             // Call the uploadMockData API
-            Call<String> call = menuItemApiService.uploadMockData(body);
-            call.enqueue(new Callback<String>() {
+            Call<Map<String, String>> call = menuItemApiService.uploadMockData(body);
+
+            call.enqueue(new Callback<Map<String, String>>() {
                 @Override
-                public void onResponse(Call<String> call, Response<String> response) {
+                public void onResponse(Call<Map<String, String>> call, Response<Map<String, String>> response) {
                     if (response.isSuccessful() && response.body() != null) {
-                        String serverResponse = response.body();
-                        Log.d(TAG, "Import Data Response: " + serverResponse);
-                        Toast.makeText(ComboListActivity.this, "Data Imported Successfully: " + serverResponse, Toast.LENGTH_LONG).show();
+                        Map<String, String> responseBody = response.body();
+                        String message = responseBody.get("message");
+                        String filePath = responseBody.get("filePath");
+
+                        Log.d(TAG, "Response: " + message + " File saved at: " + filePath);
+                        Toast.makeText(ComboListActivity.this, message, Toast.LENGTH_LONG).show();
                     } else {
-                        Log.e(TAG, "Failed to import data: " + response.code());
-                        Toast.makeText(ComboListActivity.this, "Failed to import data", Toast.LENGTH_LONG).show();
+                        Log.e(TAG, "Error importing data: " + response.code());
+                        Toast.makeText(ComboListActivity.this, "Failed to import data. Response code: " + response.code(), Toast.LENGTH_SHORT).show();
                     }
                 }
 
                 @Override
-                public void onFailure(Call<String> call, Throwable t) {
+                public void onFailure(Call<Map<String, String>> call, Throwable t) {
                     Log.e(TAG, "Error importing data: " + t.getMessage(), t);
-                    Toast.makeText(ComboListActivity.this, "Error importing data.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ComboListActivity.this, "Error importing data. Please try again.", Toast.LENGTH_SHORT).show();
                 }
             });
+
         } catch (Exception e) {
             Log.e(TAG, "Error handling file URI: " + e.getMessage(), e);
             Toast.makeText(this, "Error selecting file.", Toast.LENGTH_SHORT).show();

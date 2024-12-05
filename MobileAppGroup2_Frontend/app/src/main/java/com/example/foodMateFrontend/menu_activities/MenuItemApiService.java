@@ -33,6 +33,6 @@ public interface MenuItemApiService {
     Call<String> generateCombo(@Body Map<String, Object> requestBody);
     @Multipart
     @POST("/api/menu-items/importData")
-    Call<String> uploadMockData(@Part MultipartBody.Part file);
+    Call<Map<String, String>> uploadMockData(@Part MultipartBody.Part file);
 
 }
