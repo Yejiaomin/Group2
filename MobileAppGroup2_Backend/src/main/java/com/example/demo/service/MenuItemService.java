@@ -117,7 +117,7 @@ public class MenuItemService {
                 mockDataContent +
                 "\n\n analyze the order data and suggest combo and only display the combo no extra talk before or after!i just want the result of combo, and in format of combo1：dish1,dish2...,combo2:dish1,dish2：and so on also shows each combo's total price,also ensure every combo's dish is unique.";
 
-        headers.set("Authorization", "Bearer urapikey");
+        headers.set("Authorization", "Bearer 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");
         if (!chatGptRequest.containsKey("model")) {
             chatGptRequest.put("model", "gpt-4");
         }
