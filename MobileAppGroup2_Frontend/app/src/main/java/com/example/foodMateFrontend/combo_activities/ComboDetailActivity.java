@@ -51,7 +51,7 @@ public class ComboDetailActivity extends AppCompatActivity {
             comboLayout.removeAllViews();
 
             while ((line = reader.readLine()) != null) {
-                if (!line.trim().isEmpty()) {
+                if (!line.trim().isEmpty() && line.split("-").length == 2) {
                     createComboItem(line);
                 }
             }
@@ -60,12 +60,12 @@ public class ComboDetailActivity extends AppCompatActivity {
             showEmptyMessage();
         }
     }
-
     private void createComboItem(String comboLine) {
         // Extract combo name and details
         String[] comboParts = comboLine.split("-");
-        String comboName = comboParts[0].trim(); // Combo name (e.g., "Combo1: Pickle, Coke")
+        String comboName = comboParts[0].trim(); // Combo name (e.g., "Combo1: Pickgle, Coke")
         String comboDetails = comboParts[1].trim(); // Total price (e.g., "Total Price: $35.00")
+
 
         // Container for each combo
         LinearLayout comboContainer = new LinearLayout(this);
