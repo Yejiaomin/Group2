@@ -2,14 +2,18 @@ package com.example.foodMateFrontend.combo_activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.os.Looper;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 import com.example.foodMateFrontend.LoadingActivity;
 
@@ -42,11 +46,20 @@ import com.example.foodMateFrontend.model.FileUtils;
 public class ComboListActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = "ComboListActivity";
+    private Button decrementAppetizer, incrementAppetizer;
+    private Button decrementEntree, incrementEntree;
+    private Button decrementDessert, incrementDessert;
+    private Button decrementDrink, incrementDrink;
     private Button generateComboButton;
     private Button importDataButton;
+    private EditText appetizerCountText, entreeCountText, dessertCountText, drinkCountText;
+    private EditText minPriceText, maxPriceText, comboNumText;
     private MenuItemApiService menuItemApiService;
     private static final int FILE_PICKER_REQUEST_CODE = 1;
     private Uri selectedFileUri;
+    private int appetizerNum, entreeNum, dessertNum, drinkNum, minPrice, maxPrice, comboNum;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,14 +74,143 @@ public class ComboListActivity extends AppCompatActivity implements BottomNaviga
         bottomNavigationView.setSelectedItemId(R.id.nav_combos); // 设置当前选中项
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
 
+        // Initialize combo generator parameters
+        sharedPreferences = getSharedPreferences("comboGeneratorParams", MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+        appetizerCountText = findViewById(R.id.appetizer_count);
+        entreeCountText = findViewById(R.id.entree_count);
+        dessertCountText = findViewById(R.id.dessert_count);
+        drinkCountText = findViewById(R.id.drink_count);
+        minPriceText = findViewById(R.id.minPriceInput);
+        maxPriceText = findViewById(R.id.maxPriceInput);
+        comboNumText = findViewById(R.id.comboNumberInput);
+
+
+        // Retrieve parameters from api if exists
+        appetizerNum = sharedPreferences.getInt("AppetizerNum", 0);
+        entreeNum = sharedPreferences.getInt("EntreeNum", 0);
+        dessertNum = sharedPreferences.getInt("DessertNum", 0);
+        drinkNum = sharedPreferences.getInt("DrinkNum", 0);
+        minPrice = sharedPreferences.getInt("MinPrice", 0);
+        maxPrice = sharedPreferences.getInt("MaxPrice", 0);
+        comboNum = sharedPreferences.getInt("ComboNum", 0);
+
+        appetizerCountText.setText(String.valueOf(appetizerNum));
+        entreeCountText.setText(String.valueOf(entreeNum));
+        dessertCountText.setText(String.valueOf(dessertNum));
+        drinkCountText.setText(String.valueOf(drinkNum));
+        minPriceText.setText(minPrice == 0 ? String.valueOf(""): String.valueOf(minPrice));
+        maxPriceText.setText(maxPrice == 0 ? String.valueOf(""): String.valueOf(maxPrice));
+        comboNumText.setText(comboNum == 0 ? String.valueOf(""): String.valueOf(comboNum));
+
         // 初始化生成按钮
+        decrementAppetizer = findViewById(R.id.decrement_appetizer);
+        incrementAppetizer = findViewById(R.id.increment_appetizer);
+        decrementEntree = findViewById(R.id.decrement_entree);
+        incrementEntree = findViewById(R.id.increment_entree);
+        decrementDessert = findViewById(R.id.decrement_dessert);
+        incrementDessert = findViewById(R.id.increment_dessert);
+        decrementDrink = findViewById(R.id.decrement_drink);
+        incrementDrink = findViewById(R.id.increment_drink);
+
+        decrementAppetizer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (appetizerNum > 0) appetizerNum--;
+                appetizerCountText.setText(String.valueOf(appetizerNum));
+                updateParam("AppetizerNum");
+            }
+        });
+        incrementAppetizer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                appetizerNum++;
+                appetizerCountText.setText(String.valueOf(appetizerNum));
+                updateParam("AppetizerNum");
+            }
+        });
+        decrementEntree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (entreeNum > 0) entreeNum--;
+                entreeCountText.setText(String.valueOf(entreeNum));
+                updateParam("EntreeNum");
+            }
+        });
+        incrementEntree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                entreeNum++;
+                entreeCountText.setText(String.valueOf(entreeNum));
+                updateParam("EntreeNum");
+            }
+        });
+        decrementDessert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (dessertNum > 0) dessertNum--;
+                dessertCountText.setText(String.valueOf(dessertNum));
+                updateParam("DessertNum");
+            }
+        });
+        incrementDessert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dessertNum++;
+                dessertCountText.setText(String.valueOf(dessertNum));
+                updateParam("DessertNum");
+            }
+        });
+        decrementDrink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (drinkNum > 0) drinkNum--;
+                drinkCountText.setText(String.valueOf(drinkNum));
+                updateParam("DrinkNum");
+            }
+        });
+        incrementDrink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drinkNum++;
+                drinkCountText.setText(String.valueOf(drinkNum));
+                updateParam("DrinkNum");
+            }
+        });
+
+        minPriceText.addTextChangedListener(new SimpleTextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                minPrice = Integer.parseInt(minPriceText.getText().toString());
+                updateParam("MinPrice");
+            }
+        });
+
+        maxPriceText.addTextChangedListener(new SimpleTextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                maxPrice = Integer.parseInt(maxPriceText.getText().toString());
+                updateParam("MaxPrice");
+            }
+        });
+
+        comboNumText.addTextChangedListener(new SimpleTextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                comboNum = Integer.parseInt(comboNumText.getText().toString());
+                updateParam("ComboNum");
+            }
+        });
+
         generateComboButton = findViewById(R.id.generator);
         generateComboButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 generateCombo();
+                uploadAllParams();
             }
         });
+
         importDataButton = findViewById(R.id.button);
         importDataButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -145,6 +287,43 @@ public class ComboListActivity extends AppCompatActivity implements BottomNaviga
                 Toast.makeText(ComboListActivity.this, "Error generating combo. Please try again.", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void uploadAllParams(){
+        SharedPreferences sharedPreferences = getSharedPreferences("comboGeneratorParams", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("AppetizerNum", appetizerNum);
+        editor.putInt("EntreeNum", entreeNum);
+        editor.putInt("DessertNum", dessertNum);
+        editor.putInt("DrinkNum", drinkNum);
+        editor.apply();
+    }
+
+    private void updateParam(String param){
+        switch (param){
+            case "AppetizerNum":
+                editor.putInt("AppetizerNum", appetizerNum);
+                break;
+            case "EntreeNum":
+                editor.putInt("EntreeNum", entreeNum);
+                break;
+            case "DessertNum":
+                editor.putInt("DessertNum", dessertNum);
+                break;
+            case "DrinkNum":
+                editor.putInt("DrinkNum", drinkNum);
+                break;
+            case "MinPrice":
+                editor.putInt("MinPrice", minPrice);
+                break;
+            case "MaxPrice":
+                editor.putInt("MaxPrice", maxPrice);
+                break;
+            case "ComboNum":
+                editor.putInt("ComboNum", comboNum);
+                break;
+        }
+        editor.apply();
     }
     private void importData() {
         Log.d(TAG, "Import Data button clicked");

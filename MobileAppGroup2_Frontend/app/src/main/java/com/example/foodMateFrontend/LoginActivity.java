@@ -2,7 +2,9 @@ package com.example.foodMateFrontend;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -77,6 +79,10 @@ public class LoginActivity extends AppCompatActivity {
             loginUser(email, password);
         } else if ("restaurant".equalsIgnoreCase(userType)) {
             loginRestaurant(email, password);
+            // reset combo generator params
+            SharedPreferences.Editor editor = getSharedPreferences("comboGeneratorParams", MODE_PRIVATE).edit();
+            editor.clear();
+            editor.apply();
         } else {
             Toast.makeText(LoginActivity.this, "Invalid user type", Toast.LENGTH_SHORT).show();
         }
