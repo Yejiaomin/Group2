@@ -115,9 +115,9 @@ public class MenuItemService {
                 menuItemsContent +
                 "\n\nAdditionally, here is customer order data in JSON format:\n\n" +
                 mockDataContent +
-                "\n\n analyze the order data and suggest combo and only display the combo no extra talk before or after!i just want the result of combo, and in format of combo1：dish1,dish2...,combo2:dish1,dish2：and so on also shows each combo's total price,also ensure every combo's dish is unique.";
+                "\n\n analyze the order data and suggest combo and only display the combo no extra talk before or after!i just want the result of combo, and in format of combo1：dish1,dish2...,combo2:dish1,dish2：and so on also shows each combo's total price,also ensure every combo's dish is unique.no extra talk in the end too";
 
-        headers.set("Authorization", "Bearer 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");
+        headers.set("Authorization", "Bearer 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");
         if (!chatGptRequest.containsKey("model")) {
             chatGptRequest.put("model", "gpt-4");
         }
@@ -154,14 +154,15 @@ public class MenuItemService {
                 // 解析格式: combo1: dish1, dish2
                 String[] parts = line.split(":");
                 if (parts.length == 2) {
-                    String comboName = parts[0].trim();
-                    String[] dishes = parts[1].split(",");
-                    List<String> dishList = Arrays.stream(dishes)
-                            .map(String::trim)
-                            .collect(Collectors.toList());
-                    combos.put(comboName, dishList);
-                }
+                String comboName = parts[0].trim();
+                String[] dishes = parts[1].split(",");
+                List<String> dishList = Arrays.stream(dishes)
+                        .map(String::trim)
+                        .collect(Collectors.toList());
+                combos.put(comboName, dishList);
             }
+
+        }
         } catch (Exception e) {
             throw new RuntimeException("Failed to parse content to JSON", e);
         }
