@@ -21,9 +21,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static com.mysql.cj.conf.PropertyKey.logger;
@@ -117,9 +115,9 @@ public class MenuItemService {
                 menuItemsContent +
                 "\n\nAdditionally, here is customer order data in JSON format:\n\n" +
                 mockDataContent +
-                "\n\n analyze the order data and suggest combo and only display the combo no extra talk before or after!i just want the result of combo and in format of combo1,combo2.";
+                "\n\n analyze the order data and suggest combo and only display the combo no extra talk before or after!i just want the result of combo, and in format of combo1：dish1,dish2...,combo2:dish1,dish2：and so on also shows each combo's total price,also ensure every combo's dish is unique.";
 
-        headers.set("Authorization", "Bearer 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");
+        headers.set("Authorization", "Bearer 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");
         if (!chatGptRequest.containsKey("model")) {
             chatGptRequest.put("model", "gpt-4");
         }
@@ -136,7 +134,10 @@ public class MenuItemService {
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode rootNode = objectMapper.readTree((String)response.getBody());
             String content = rootNode.path("choices").get(0).path("message").path("content").asText();
-            return content;
+            logger.info("Extracted Content: {}", content);
+            // 返回 JSON 给前端
+             return content;
+
         } catch (HttpClientErrorException var12) {
             logger.error("HTTP Error: {}", var12.getResponseBodyAsString());
             throw new RuntimeException("Failed to call ChatGPT", var12);
@@ -145,7 +146,30 @@ public class MenuItemService {
             throw new RuntimeException("Failed to call ChatGPT", var13);
         }
     }
+    private Map<String, List<String>> parseCombosToJson(String content) {
+        Map<String, List<String>> combos = new LinkedHashMap<>();
+        try {
+            String[] lines = content.split("\n");
+            for (String line : lines) {
+                // 解析格式: combo1: dish1, dish2
+                String[] parts = line.split(":");
+                if (parts.length == 2) {
+                    String comboName = parts[0].trim();
+                    String[] dishes = parts[1].split(",");
+                    List<String> dishList = Arrays.stream(dishes)
+                            .map(String::trim)
+                            .collect(Collectors.toList());
+                    combos.put(comboName, dishList);
+                }
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to parse content to JSON", e);
+        }
+        return combos;
     }
+
+
+}
 
 
 

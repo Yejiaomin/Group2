@@ -3,58 +3,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFF5E9"
-    android:padding="16dp">
+    android:background="#FFF5E9">
 
-    <!-- 可滚动的内容区域 -->
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Combo Details"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="#FAE7D2" />
+
+    <!-- 可滚动的 Combo 列表 -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-
         <LinearLayout
+            android:id="@+id/comboListLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="All Combos"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="16dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Combo 1: Description"
-                android:layout_marginBottom="8dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Combo 2: Description"
-                android:layout_marginBottom="8dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Combo 3: Description"
-                android:layout_marginBottom="8dp" />
-
-            <!-- 更多 Combo 可以继续添加 -->
         </LinearLayout>
     </ScrollView>
 
-    <!-- 固定在页面底部的按钮 -->
+    <!-- 底部保存按钮 -->
     <Button
-        android:id="@+id/addComboButton"
-        android:layout_width="wrap_content"
+        android:id="@+id/saveComboButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Combo"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="8dp"
+        android:text="Save Combo"
+        android:textSize="16sp"
+        android:layout_margin="16dp"
         android:backgroundTint="#D4A03D"
-        android:textColor="#FFFFFF"/>
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center" />
 </LinearLayout>

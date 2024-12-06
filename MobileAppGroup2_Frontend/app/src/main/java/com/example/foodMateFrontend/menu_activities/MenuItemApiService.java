@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import okhttp3.MultipartBody;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
@@ -30,9 +31,9 @@ public interface MenuItemApiService {
     @DELETE("api/menu-items/{id}")
     Call<Void> deleteMenuItem(@Path("id") Integer id);
     @POST("/api/menu-items/generateCombos")
-    Call<String> generateCombo(@Body Map<String, Object> requestBody);
+    Call<ResponseBody> generateCombo();
     @Multipart
     @POST("/api/menu-items/importData")
-    Call<String> uploadMockData(@Part MultipartBody.Part file);
+    Call<Map<String, String>> uploadMockData(@Part MultipartBody.Part file);
 
 }

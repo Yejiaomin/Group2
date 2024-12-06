@@ -69,28 +69,32 @@ public class MenuItemController {
         }
     }
     @PostMapping("/importData")
-    public ResponseEntity<String> uploadMockDataFile(@RequestParam("file") MultipartFile file) {
+    public ResponseEntity<Map<String, String>> uploadMockDataFile(@RequestParam("file") MultipartFile file) {
         try {
-            // Save the mock data file to a temporary directory
+            // Save the file to a temporary directory
             Path tempFile = Files.createTempFile("mockData", ".json");
             file.transferTo(tempFile.toFile());
 
-            // Store the file path for subsequent use
+            // Store the file path for subsequent use in the service
             String filePath = tempFile.toAbsolutePath().toString();
             menuItemService.setMockDataFilePath(filePath);
-            // Confirm the file exists
-            if (Files.exists(tempFile)) {
-                System.out.println("File saved at: " + filePath);
-            } else {
-                System.out.println("File does not exist at: " + filePath);
-            }
 
-            return ResponseEntity.ok("File uploaded successfully: " + filePath);
+            // Log the file path
+            logger.info("File saved at: {}", filePath);
+
+            // Prepare the response
+            Map<String, String> response = new HashMap<>();
+            response.put("message", "File uploaded successfully");
+            response.put("filePath", filePath);
+
+            return ResponseEntity.ok(response);
         } catch (IOException e) {
-            e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to upload file");
+            logger.error("Failed to upload file", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(Map.of("error", "Failed to upload file"));
         }
     }
+
 
 
     @GetMapping("/category-counts")
