@@ -2,6 +2,7 @@ package com.example.foodMateFrontend;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,11 +16,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.foodMateFrontend.menu_activities.MenuListActivity;
 
+import java.util.Random;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class RegisterActivity extends AppCompatActivity {
+
+    Button sendVerificationCodeBtn;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
+    EditText verificationCodeInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +37,11 @@ public class RegisterActivity extends AppCompatActivity {
         EditText emailInput = findViewById(R.id.emailInput);
         EditText passwordInput = findViewById(R.id.passwordInput);
         Button registerButton = findViewById(R.id.registerSubmitButton);
-        CheckBox userTypeCheckBox = findViewById(R.id.toggleUserTypeButton); // 选择用户类型的 CheckBox
+        sendVerificationCodeBtn = findViewById(R.id.sendVerificationCodeBtn);
+        verificationCodeInput = findViewById(R.id.verificationCodeInput);
+
+        sharedPreferences = getSharedPreferences("verification", MODE_PRIVATE);
+        editor = sharedPreferences.edit();
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,17 +58,33 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this, "Password must be at least 6 characters", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                String verificationCode = sharedPreferences.getString(email, "");
+                String userInputVerificationCode = verificationCodeInput.getText().toString();
+                if (!verificationCode.equals(userInputVerificationCode)){
+                    Toast.makeText(RegisterActivity.this, "Incorrect verification code. ", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 ProgressDialog progressDialog = new ProgressDialog(RegisterActivity.this);
                 progressDialog.setMessage("Registering...");
                 progressDialog.setCancelable(false);
                 progressDialog.show();
 
-                if (userTypeCheckBox.isChecked()) {
-                    registerRestaurant(email, password, progressDialog);
-                } else {
-                    registerUser(email, password, progressDialog);
-                }
+                registerRestaurant(email, password, progressDialog);
+            }
+        });
+
+        sendVerificationCodeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Random random = new Random();
+                int code = random.nextInt(1000000); // Generates a number from 0 to 999999
+                String verificationCode = String.format("%06d", code);
+                String email = emailInput.getText().toString();
+                editor.putString(email, verificationCode);
+                editor.apply();
+                EmailSender.sendEmail(email, verificationCode);
+                Toast.makeText(RegisterActivity.this, "Verification code sent. ", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -79,7 +107,7 @@ public class RegisterActivity extends AppCompatActivity {
                 progressDialog.dismiss();
                 if (response.isSuccessful()) {
                     Toast.makeText(RegisterActivity.this, "Restaurant registered successfully", Toast.LENGTH_SHORT).show();
-                    navigateToActivity(RestaurantActivity.class);
+                    navigateToActivity(MenuListActivity.class);
                 } else {
                     Toast.makeText(RegisterActivity.this, "Restaurant registration failed", Toast.LENGTH_SHORT).show();
                 }

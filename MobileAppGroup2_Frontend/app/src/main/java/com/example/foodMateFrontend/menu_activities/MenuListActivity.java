@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.foodMateFrontend.EmailSender;
 import com.example.foodMateFrontend.R;
 import com.example.foodMateFrontend.RetrofitClient;
 
