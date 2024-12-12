@@ -1,5 +1,7 @@
 package com.example.foodMateFrontend.menu_activities;
 
+import com.example.foodMateFrontend.favorite_activities.FavoriteCombo;
+
 import java.util.List;
 import java.util.Map;
 
@@ -9,6 +11,7 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
+import retrofit2.http.HTTP;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
@@ -30,10 +33,23 @@ public interface MenuItemApiService {
 
     @DELETE("api/menu-items/{id}")
     Call<Void> deleteMenuItem(@Path("id") Integer id);
-    @POST("/api/menu-items/generateCombos")
-    Call<ResponseBody> generateCombo();
+
     @Multipart
     @POST("/api/menu-items/importData")
     Call<Map<String, String>> uploadMockData(@Part MultipartBody.Part file);
+    @POST("/api/menu-items/generateCombosWithParams")
+    Call<ResponseBody> generateCombosWithParams(@Body Map<String, Object> params);
+    // 前端API接口定义
+    @POST("/api/menu-items/favorite-combos")
+    Call<ResponseBody> saveFavoriteCombos(@Body List<FavoriteCombo> combos);
+    @GET("api/menu-items/favorite-combos")
+    Call<List<FavoriteCombo>> getFavoriteCombos();
+
+    @HTTP(method = "DELETE", path = "api/menu-items/favorite-combos", hasBody = true)
+    Call<ResponseBody> deleteFavoriteCombos(@Body List<Long> comboIds);
+
+
+
+
 
 }
