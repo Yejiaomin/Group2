@@ -43,32 +43,50 @@
         android:padding="10dp"
         android:textColorHint="#A9A9A9" />
 
-    <!-- Confirm Password Input -->
+    <!-- Verification Code Input -->
+    <LinearLayout
+
+        android:id="@+id/verificationLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/verificationCodeInput"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Verification Code"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColorHint="#A9A9A9" />
+
+        <Button
+            android:id="@+id/sendVerificationCodeBtn"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#D4A03D"
+            android:text="Send" />
+
+    </LinearLayout>
 
     <!-- Register Button -->
+
     <Button
         android:id="@+id/registerSubmitButton"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_below="@id/passwordInput"
+        android:layout_below="@id/verificationLayout"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#D4A03D"
         android:text="@string/register_button"
         android:textColor="#FFFFFF" />
-
-    <CheckBox
-        android:id="@+id/toggleUserTypeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/as_restaurant"
-        android:layout_below="@id/registerSubmitButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        android:background="#D4A03D"
-        android:textColor="#FFFFFF"
-        android:gravity="center_vertical" />
 
 </RelativeLayout>
