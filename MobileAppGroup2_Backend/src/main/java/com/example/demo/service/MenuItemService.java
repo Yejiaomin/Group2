@@ -191,7 +191,7 @@ public class MenuItemService {
                 comboRequest.getMaxPrice()
         );
 
-        headers.set("Authorization", "Bearer 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");
+        headers.set("Authorization", "Bearer ");
 
         Map<String, Object> openAiRequest = new HashMap<>();
         openAiRequest.put("model", "gpt-4");

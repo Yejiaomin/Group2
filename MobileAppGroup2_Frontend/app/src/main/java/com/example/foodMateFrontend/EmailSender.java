@@ -17,7 +17,7 @@ public class EmailSender {
     private static final String SMTP_PASSWORD = "bpsx vpaa inst ifkt";
 
     private static final String EMAIL_FROM = "dwtintchev@gmail.com";
-    private static final String EMAIL_SUBJECT = "ComboCreator - Your Verification Code";
+    private static final String EMAIL_SUBJECT = "FoodMate - Your Verification Code";
 
     public static void sendEmail(String to, String code) {
         Properties properties = new Properties();
@@ -39,7 +39,7 @@ public class EmailSender {
             message.setFrom(new InternetAddress(EMAIL_FROM));
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
             message.setSubject(EMAIL_SUBJECT);
-            message.setContent("<h3>Thank you for using ComboCreator. Your verification code is: " + code, "text/html;charset=UTF-8");
+            message.setContent("<h3>Thank you for using FoodMate. Your verification code is: " + code, "text/html;charset=UTF-8");
 //            message.setText(code);
 
             new Thread(new Runnable() {

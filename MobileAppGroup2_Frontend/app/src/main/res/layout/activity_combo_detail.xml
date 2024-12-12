@@ -10,7 +10,7 @@
         android:id="@+id/pageTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Combo Details"
+        android:text="Combo Suggestions"
         android:gravity="center"
         android:padding="16dp"
         android:textSize="20sp"

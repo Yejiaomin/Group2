@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Favorite Combo"
-                android:textSize="20sp"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp" />
 
@@ -39,8 +39,10 @@
                 android:id="@+id/deleteComboButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Delete Selected Combos"
-                android:layout_marginBottom="8dp"/>
+                android:text="Delete Selected Combo"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#D4A03D"
+                android:textColor="#FFFFFF"/>
 
             <LinearLayout
                 android:id="@+id/favoriteListLayout"
