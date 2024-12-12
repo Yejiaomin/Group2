@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -28,6 +29,7 @@ public class RegisterActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
     EditText verificationCodeInput;
+    CountDownTimer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,22 +73,52 @@ public class RegisterActivity extends AppCompatActivity {
                 progressDialog.show();
 
                 registerRestaurant(email, password, progressDialog);
+
+                // clear registered account's verification code
+                editor = getSharedPreferences("verification", MODE_PRIVATE).edit();
+                editor.remove(email);
+                editor.apply();
             }
         });
 
         sendVerificationCodeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // generate verification code
                 Random random = new Random();
                 int code = random.nextInt(1000000); // Generates a number from 0 to 999999
                 String verificationCode = String.format("%06d", code);
+
+                // add the verification code into cache and send it
                 String email = emailInput.getText().toString();
                 editor.putString(email, verificationCode);
                 editor.apply();
                 EmailSender.sendEmail(email, verificationCode);
+
+                // set countdowntimer
+                startTimer();
+
+                // notification
                 Toast.makeText(RegisterActivity.this, "Verification code sent. ", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void startTimer() {
+        timer = new CountDownTimer(60000, 1000) {
+            @Override
+            public void onTick(long l) {
+                sendVerificationCodeBtn.setClickable(false);
+                String text = l / 1000 + "sec";
+                sendVerificationCodeBtn.setText(text);
+            }
+
+            @Override
+            public void onFinish() {
+                sendVerificationCodeBtn.setClickable(true);
+                sendVerificationCodeBtn.setText("Send");
+            }
+        }.start();
     }
 
     private boolean isValidEmail(String email) {
@@ -151,4 +183,5 @@ public class RegisterActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
 }

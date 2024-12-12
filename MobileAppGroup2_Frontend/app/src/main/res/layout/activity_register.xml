@@ -71,7 +71,7 @@
             android:layout_height="50dp"
             android:layout_marginStart="10dp"
             android:layout_weight="1"
-
+            android:backgroundTint="#D4A03D"
             android:text="Send" />
 
     </LinearLayout>
