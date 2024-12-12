@@ -1,3 +1,554 @@
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 131
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+
+}
+
+<> 2024-12-11T161851.500.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 131
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+
+}
+
+<> 2024-12-11T161741.500.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombos
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-12-10T205237.405.json
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 131
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+
+}
+
+<> 2024-12-10T205217.200.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 131
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+
+}
+
+<> 2024-12-10T203723.200.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 131
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+
+}
+
+<> 2024-12-10T123145.200.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 133
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 5
+
+}
+
+<> 2024-12-10T123130.200.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 130
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 5
+}
+
+<> 2024-12-10T112414.200.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombos
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-12-10T111913.500.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 130
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+}
+
+<> 2024-12-10T111841.200.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 130
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+}
+
+<> 2024-12-10T111826.500.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 130
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+}
+
+<> 2024-12-10T111748.500.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 130
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+}
+
+<> 2024-12-10T111525.500.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 130
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+}
+
+<> 2024-12-10T111510.500.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 130
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+}
+
+<> 2024-12-10T111410.500.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 130
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+}
+
+<> 2024-12-10T105737.500.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 130
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+}
+
+<> 2024-12-10T105721.500.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 130
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+}
+
+<> 2024-12-10T105143.500.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 130
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+}
+
+<> 2024-12-10T105131.500.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 130
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+}
+
+<> 2024-12-10T105107.500.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 130
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+}
+
+<> 2024-12-10T104400.500.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 130
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+}
+
+<> 2024-12-10T104114.500.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 130
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+}
+
+<> 2024-12-10T104101.500.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 130
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+}
+
+<> 2024-12-10T104052.500.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 130
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+}
+
+<> 2024-12-10T102856.500.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 130
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+}
+
+<> 2024-12-10T101543.500.txt
+
+###
+
+POST http://localhost:8080/api/menu-items/generateCombosWithParams
+Content-Type: application/json
+Content-Length: 130
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "appetizerNum": 1,
+  "entreeNum": 2,
+  "dessertNum": 1,
+  "drinkNum": 1,
+  "minPrice": 10,
+  "maxPrice": 50,
+  "comboNum": 3
+}
+
+<> 2024-12-10T101521.500.txt
+
+###
+
 POST http://localhost:8080/api/menu-items/generateCombos
 Content-Length: 0
 Connection: Keep-Alive

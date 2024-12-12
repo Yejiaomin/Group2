@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.dto.ComboRequest;
+import com.example.demo.entity.FavoriteCombo;
 import com.example.demo.entity.MenuItem;
 import com.example.demo.service.MenuItemService;
 import org.slf4j.Logger;
@@ -54,20 +55,7 @@ public class MenuItemController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
-    @PostMapping({"/generateCombos"})
-    public ResponseEntity<String> generateCombos() {
-        try {
-            List<MenuItem> menuItems = this.menuItemService.getAllMenuItems();
-            Map<String, Object> request = new HashMap();
-            request.put("model", "gpt-4");
-            String chatGptResponse = this.menuItemService.generateComboFromChatGPT(request);
-            logger.info("ChatGPT Response: {}", chatGptResponse);
-            return ResponseEntity.ok(chatGptResponse);
-        } catch (Exception var4) {
-            logger.error("Error generating combos: ", var4);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error generating combos: " + var4.getMessage());
-        }
-    }
+
     @PostMapping("/importData")
     public ResponseEntity<Map<String, String>> uploadMockDataFile(@RequestParam("file") MultipartFile file) {
         try {
@@ -182,6 +170,58 @@ public class MenuItemController {
                     .body("Error deleting menu item: " + e.getMessage());
         }
     }
+    @PostMapping("/favorite-combos")
+    public ResponseEntity<?> saveFavoriteCombos(@RequestBody List<FavoriteCombo> favoriteCombos) {
+        logger.info("Controller received request to save FavoriteCombos: {}", favoriteCombos);
+        menuItemService.saveFavoriteCombos(favoriteCombos);
+        logger.info("Controller finished processing saveFavoriteCombos request.");
+        return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("/favorite-combos")
+    public ResponseEntity<List<FavoriteCombo>> getAllFavoriteCombos() {
+        List<FavoriteCombo> combos = menuItemService.getAllFavoriteCombos();
+        return ResponseEntity.ok(combos);
+    }
+    @DeleteMapping("/favorite-combos")
+    public ResponseEntity<?> deleteFavoriteCombos(@RequestBody List<Long> comboIds) {
+        // 在service中执行删除
+        menuItemService.deleteFavoriteCombosByIds(comboIds);
+        return ResponseEntity.ok().build();
+    }
+
+
+    @PostMapping("/generateCombosWithParams")
+
+    public ResponseEntity<String> generateCombosWithParams(@RequestBody(required = true) ComboRequest comboRequest) {
+
+        if (comboRequest == null) {
+            logger.error("ComboRequest is null");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("ComboRequest cannot be null");
+        }
+
+        // Log each parameter
+        logger.info("Received ComboRequest: {}", comboRequest);
+        logger.info("AppetizerNum: {}", comboRequest.getAppetizerNum());
+        logger.info("EntreeNum: {}", comboRequest.getEntreeNum());
+        logger.info("DessertNum: {}", comboRequest.getDessertNum());
+        logger.info("DrinkNum: {}", comboRequest.getDrinkNum());
+        logger.info("MinPrice: {}", comboRequest.getMinPrice());
+        logger.info("MaxPrice: {}", comboRequest.getMaxPrice());
+        logger.info("ComboNum: {}", comboRequest.getComboNum());
+
+        try {
+            String result = menuItemService.generateComboWithParams(comboRequest);
+            return ResponseEntity.ok(result);
+        } catch (Exception e) {
+            logger.error("Error generating combos: ", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error generating combos: " + e.getMessage());
+        }
+    }
+
+
+
+
 
     private boolean validateMenuItem(MenuItem menuItem) {
         return menuItem.getName() != null && !menuItem.getName().trim().isEmpty() &&

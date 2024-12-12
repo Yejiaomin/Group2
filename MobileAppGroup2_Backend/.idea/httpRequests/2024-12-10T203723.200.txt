@@ -1,0 +1,3 @@
+combo1: Pickle, Pineapple Rice, Bok Choy With Chili Pepper, Tiramisu Cake, Coke - Total Price: $46.00
+combo2: Taiwanese Fried Pork Chop, Chow Fun with Beef, String Beans & Eggplant with Soy Sauce, Cheese Cake, Sprite - Total Price: $50.25
+combo3: Scallion Pan Cake, Orange Chicken, Salt Pepper Chicken Wings, Strawberry Cake, Orange Juice - Total Price: $39.50
