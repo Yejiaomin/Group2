@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: com.example.demo.service.MenuItemServiceTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.459 s <<< FAILURE! -- in com.example.demo.service.MenuItemServiceTest
+com.example.demo.service.MenuItemServiceTest.testGenerateComboFromChatGPT -- Time elapsed: 1.432 s <<< ERROR!
+java.lang.RuntimeException: Failed to call ChatGPT
+	at com.example.demo.service.MenuItemService.generateComboFromChatGPT(MenuItemService.java:143)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+	at com.example.demo.service.MenuItemService$$SpringCGLIB$$0.generateComboFromChatGPT(<generated>)
+	at com.example.demo.service.MenuItemServiceTest.testGenerateComboFromChatGPT(MenuItemServiceTest.java:42)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.springframework.web.client.HttpClientErrorException$Unauthorized: 401 Unauthorized: [no body]
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:106)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:183)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:137)
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:942)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:891)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.postForEntity(RestTemplate.java:538)
+	at com.example.demo.service.MenuItemService.generateComboFromChatGPT(MenuItemService.java:121)
+	... 9 more
+

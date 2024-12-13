@@ -1,0 +1,5 @@
+# Created at 2024-12-03T14:59:41.757
+Boot Manifest-JAR contains absolute paths in classpath 'E:\CodeProject\Mycode\Group2-Jiawei_liu\MobileAppGroup2_Backend\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
